@@ -1,5 +1,5 @@
 ---
-title: "Hello World👋: Managing Dev.to Articles with GitOps"
+title: "Hello World: Managing Dev.to Articles with GitOps"
 published: true
 description: "A quick look at why and how I decided to manage my technical blog posts using Git, Markdown, and GitHub Actions."
 tags: ["productivity", "github", "automation", "gitops"]

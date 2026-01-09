@@ -1,6 +1,6 @@
 ---
 title: "The Birth of Websites: A Visual Journey through IT History"
-published: false
+published: true
 description: "I built a visual timeline exploring the origins of major tech companies, web services, and even the dark web. Built with Vue 3 & Vite."
 tags: ["showdev", "vue", "webdev", "history"]
 ---
@@ -12,9 +12,7 @@ Have you ever wondered when your favorite programming language was actually rele
 I developed a web service called **[The Birth of Websites](https://kanywst.github.io/thebirthofwebsites/)**.
 It is a visual timeline of IT history, exploring the founding dates and origins of major tech companies, web services, programming languages, and operating systems.
 
-<img src="./assets/the-birth-of-websites/example.png" alt="Screenshot of The Birth of Websites" style="border: 2px solid black;">
-
-TODO: replace github rawa link
+<img src="https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/the-birth-of-websites/example.png" alt="Screenshot of The Birth of Websites" style="border: 2px solid black;">
 
 ## Links
 

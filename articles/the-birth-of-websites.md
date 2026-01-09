@@ -1,8 +1,14 @@
 ---
-title: "The Birth of Websites: A Visual Journey through IT History"
+title: 'The Birth of Websites: A Visual Journey through IT History'
 published: true
-description: "I built a visual timeline exploring the origins of major tech companies, web services, and even the dark web. Built with Vue 3 & Vite."
-tags: ["showdev", "vue", "webdev", "history"]
+description: 'I built a visual timeline exploring the origins of major tech companies, web services, and even the dark web. Built with Vue 3 & Vite.'
+tags:
+  - showdev
+  - vue
+  - webdev
+  - history
+id: 3159101
+date: '2026-01-09T00:06:14Z'
 ---
 
 # Introduction

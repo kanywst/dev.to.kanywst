@@ -7,7 +7,7 @@ tags:
   - kernel
   - ebpf
   - programming
-cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/linux-kernel/linux-kernel.png"
+cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/linux-kernel/linux-kernel.png'
 id: 3161925
 ---
 

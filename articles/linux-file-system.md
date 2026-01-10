@@ -183,7 +183,7 @@ ls -i config.txt       # 1714737
 **Why does this matter?**
 If you are monitoring a log file by its inode (e.g., using `inotify`), and the file is rotated or edited via `sed -i`, your monitor might lose track of the file because the original inode is gone!
 
-#### Appending vs. Editing (The Vim Behavior)
+#### Appending vs. Editing: The Vim Behavior
 
 Let's look at how text editors behave compared to simple redirection. This distinction is crucial for understanding atomic operations.
 

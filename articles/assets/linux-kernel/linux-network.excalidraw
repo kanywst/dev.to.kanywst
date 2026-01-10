@@ -669,8 +669,8 @@
         "type": 2
       },
       "seed": 664425431,
-      "version": 5,
-      "versionNonce": 2100301879,
+      "version": 6,
+      "versionNonce": 1313644986,
       "isDeleted": false,
       "boundElements": [
         {
@@ -678,7 +678,7 @@
           "id": "-6itVf57rF71PA8Y_RuSa"
         }
       ],
-      "updated": 1768023981735,
+      "updated": 1768037768221,
       "link": null,
       "locked": false,
       "points": [
@@ -753,8 +753,8 @@
         "type": 2
       },
       "seed": 928680471,
-      "version": 5,
-      "versionNonce": 564512663,
+      "version": 6,
+      "versionNonce": 561293158,
       "isDeleted": false,
       "boundElements": [
         {
@@ -762,7 +762,7 @@
           "id": "9B8AYK6UVwBHtHOkQhdah"
         }
       ],
-      "updated": 1768023981735,
+      "updated": 1768037772805,
       "link": null,
       "locked": false,
       "points": [
@@ -837,8 +837,8 @@
         "type": 2
       },
       "seed": 213004375,
-      "version": 5,
-      "versionNonce": 1836727031,
+      "version": 6,
+      "versionNonce": 1727221754,
       "isDeleted": false,
       "boundElements": [
         {
@@ -846,7 +846,7 @@
           "id": "PhpfmePhFrmVPZrFtH90b"
         }
       ],
-      "updated": 1768023981735,
+      "updated": 1768037776656,
       "link": null,
       "locked": false,
       "points": [
@@ -986,8 +986,8 @@
     {
       "id": "6SUL-4sEXfdeXufJCrXee",
       "type": "arrow",
-      "x": 272.24573600128844,
-      "y": 455.84711738128243,
+      "x": 297.86292350128844,
+      "y": 461.0924176742512,
       "width": 60.5,
       "height": 40,
       "angle": 0,
@@ -1005,8 +1005,8 @@
         "type": 2
       },
       "seed": 1924648151,
-      "version": 5,
-      "versionNonce": 1314215351,
+      "version": 45,
+      "versionNonce": 1671514106,
       "isDeleted": false,
       "boundElements": [
         {
@@ -1014,7 +1014,7 @@
           "id": "IzYaI-B4fYPhxE6v-069s"
         }
       ],
-      "updated": 1768023981735,
+      "updated": 1768037806302,
       "link": null,
       "locked": false,
       "points": [
@@ -1078,8 +1078,8 @@
     {
       "id": "GhvEnIOUKl9r3yOM-QZsh",
       "type": "arrow",
-      "x": 272.24573600128844,
-      "y": 552.8471173812825,
+      "x": 311.61136710480406,
+      "y": 543.8659162094075,
       "width": 60.5,
       "height": 40,
       "angle": 0,
@@ -1097,8 +1097,8 @@
         "type": 2
       },
       "seed": 1915601687,
-      "version": 5,
-      "versionNonce": 1191116055,
+      "version": 95,
+      "versionNonce": 613819878,
       "isDeleted": false,
       "boundElements": [
         {
@@ -1106,7 +1106,7 @@
           "id": "P464ajPMmCAVtBNs28DOB"
         }
       ],
-      "updated": 1768023981735,
+      "updated": 1768037803918,
       "link": null,
       "locked": false,
       "points": [
@@ -1170,10 +1170,10 @@
     {
       "id": "UItKSIIIgjiBrvfaJlMdK",
       "type": "arrow",
-      "x": 273.24573600128844,
-      "y": 699.3471173812825,
-      "width": 476,
-      "height": 0,
+      "x": 292.1879204495306,
+      "y": 699.0611981918294,
+      "width": 457.0578155517578,
+      "height": 0.285919189453125,
       "angle": 0,
       "strokeColor": "#1e1e1e",
       "backgroundColor": "transparent",
@@ -1189,8 +1189,8 @@
         "type": 2
       },
       "seed": 348858711,
-      "version": 5,
-      "versionNonce": 441278583,
+      "version": 38,
+      "versionNonce": 1131119226,
       "isDeleted": false,
       "boundElements": [
         {
@@ -1198,7 +1198,7 @@
           "id": "DE8tIF5SKjGEvcwyqv7AY"
         }
       ],
-      "updated": 1768023981735,
+      "updated": 1768037819187,
       "link": null,
       "locked": false,
       "points": [
@@ -1207,12 +1207,16 @@
           0
         ],
         [
-          476,
-          0
+          457.0578155517578,
+          0.285919189453125
         ]
       ],
       "lastCommittedPoint": null,
-      "startBinding": null,
+      "startBinding": {
+        "elementId": "jK3cfgEoHbFsho__iZFzX",
+        "focus": -0.01990633480669453,
+        "gap": 11.442184448242188
+      },
       "endBinding": null,
       "startArrowhead": null,
       "endArrowhead": "arrow",
@@ -1238,16 +1242,20 @@
       "index": "aV",
       "roundness": null,
       "seed": 912909943,
-      "version": 6,
-      "versionNonce": 953694615,
+      "version": 7,
+      "versionNonce": 1735450618,
       "isDeleted": false,
       "boundElements": [
         {
           "type": "text",
           "id": "Zy8TXGBE03XB7HTW6Gr7y"
+        },
+        {
+          "id": "UItKSIIIgjiBrvfaJlMdK",
+          "type": "arrow"
         }
       ],
-      "updated": 1768023981735,
+      "updated": 1768037814666,
       "link": null,
       "locked": false
     },
@@ -1735,9 +1743,9 @@
     {
       "id": "-6itVf57rF71PA8Y_RuSa",
       "type": "text",
-      "x": -166.8299331665039,
-      "y": 177.30001831054688,
-      "width": 178.1598663330078,
+      "x": -153.4342032687311,
+      "y": 177.34711738128243,
+      "width": 151.35987854003906,
       "height": 60,
       "angle": 0,
       "strokeColor": "#1e1e1e",
@@ -1752,20 +1760,20 @@
       "index": "aj",
       "roundness": null,
       "seed": 597719607,
-      "version": 5,
-      "versionNonce": 1080338617,
+      "version": 11,
+      "versionNonce": 1141592166,
       "isDeleted": false,
       "boundElements": [],
-      "updated": 1768023979487,
+      "updated": 1768037766593,
       "link": null,
       "locked": false,
-      "text": "1. DMA Transfer of\nPacket Data<br>(Zero\nCPU Load)",
+      "text": "1. DMA Transfer of\nPacket Data\n(Zero CPU Load)",
       "fontSize": 16,
       "fontFamily": 5,
       "textAlign": "center",
       "verticalAlign": "middle",
       "containerId": "a633K1q-csm5W93nKuplr",
-      "originalText": "1. DMA Transfer of Packet Data<br>(Zero CPU Load)",
+      "originalText": "1. DMA Transfer of Packet Data\n(Zero CPU Load)",
       "autoResize": true,
       "lineHeight": 1.25
     },
@@ -1809,9 +1817,9 @@
     {
       "id": "9B8AYK6UVwBHtHOkQhdah",
       "type": "text",
-      "x": -129.06787109375,
-      "y": 254.30001831054688,
-      "width": 303.1357421875,
+      "x": -89.68817055388735,
+      "y": 254.34711738128243,
+      "width": 224.36781311035156,
       "height": 40,
       "angle": 0,
       "strokeColor": "#1e1e1e",
@@ -1826,20 +1834,20 @@
       "index": "al",
       "roundness": null,
       "seed": 571644023,
-      "version": 5,
-      "versionNonce": 811241081,
+      "version": 13,
+      "versionNonce": 1258733690,
       "isDeleted": false,
       "boundElements": [],
-      "updated": 1768023979487,
+      "updated": 1768037770540,
       "link": null,
       "locked": false,
-      "text": "2. Hardware Interrupt (IRQ)<br>\"Data\nArrived!\"",
+      "text": "2. Hardware Interrupt (IRQ)\n\"Data Arrived!\"",
       "fontSize": 16,
       "fontFamily": 5,
       "textAlign": "center",
       "verticalAlign": "middle",
       "containerId": "oLv1ESDKcud7PW4uJeToC",
-      "originalText": "2. Hardware Interrupt (IRQ)<br>\"Data Arrived!\"",
+      "originalText": "2. Hardware Interrupt (IRQ)\n\"Data Arrived!\"",
       "autoResize": true,
       "lineHeight": 1.25
     },
@@ -1883,9 +1891,9 @@
     {
       "id": "PhpfmePhFrmVPZrFtH90b",
       "type": "text",
-      "x": 324.4820785522461,
-      "y": 311.3000183105469,
-      "width": 173.5358428955078,
+      "x": 327.1738136990423,
+      "y": 311.34711738128243,
+      "width": 168.1438446044922,
       "height": 60,
       "angle": 0,
       "strokeColor": "#1e1e1e",
@@ -1900,20 +1908,20 @@
       "index": "an",
       "roundness": null,
       "seed": 12723895,
-      "version": 5,
-      "versionNonce": 14812217,
+      "version": 11,
+      "versionNonce": 1002706470,
       "isDeleted": false,
       "boundElements": [],
-      "updated": 1768023979487,
+      "updated": 1768037775222,
       "link": null,
       "locked": false,
-      "text": "3. netdev_alloc_skb()\n<br>\"Give me an empty\nsk_buff\"",
+      "text": "3. netdev_alloc_skb()\n\"Give me an empty\nsk_buff\"",
       "fontSize": 16,
       "fontFamily": 5,
       "textAlign": "center",
       "verticalAlign": "middle",
       "containerId": "0sKgzgVtQVLHWhH9epkOf",
-      "originalText": "3. netdev_alloc_skb()<br>\"Give me an empty sk_buff\"",
+      "originalText": "3. netdev_alloc_skb()\n\"Give me an empty sk_buff\"",
       "autoResize": true,
       "lineHeight": 1.25
     },
@@ -2031,10 +2039,10 @@
     {
       "id": "IzYaI-B4fYPhxE6v-069s",
       "type": "text",
-      "x": 253.35197553660424,
-      "y": 436.58482472423213,
-      "width": 175.13584899902344,
-      "height": 60,
+      "x": 259.6356982932638,
+      "y": 426.6319237949677,
+      "width": 162.55987548828125,
+      "height": 80,
       "angle": 0,
       "strokeColor": "#1e1e1e",
       "backgroundColor": "transparent",
@@ -2048,20 +2056,20 @@
       "index": "ar",
       "roundness": null,
       "seed": 1667863351,
-      "version": 6,
-      "versionNonce": 1629667577,
+      "version": 17,
+      "versionNonce": 72636538,
       "isDeleted": false,
       "boundElements": [],
-      "updated": 1768023979488,
+      "updated": 1768037786971,
       "link": null,
       "locked": false,
-      "text": "4. Bind data to\nsk_buff<br>(Copy/Map\nfrom Ring Buffer)",
+      "text": "4. Bind data to\nsk_buff\n(Copy/Map from Ring\nBuffer)",
       "fontSize": 16,
       "fontFamily": 5,
       "textAlign": "center",
       "verticalAlign": "middle",
       "containerId": "6SUL-4sEXfdeXufJCrXee",
-      "originalText": "4. Bind data to sk_buff<br>(Copy/Map from Ring Buffer)",
+      "originalText": "4. Bind data to sk_buff\n(Copy/Map from Ring Buffer)",
       "autoResize": true,
       "lineHeight": 1.25
     },
@@ -2105,9 +2113,9 @@
     {
       "id": "P464ajPMmCAVtBNs28DOB",
       "type": "text",
-      "x": 261.4042459452279,
-      "y": 534.1999149394904,
-      "width": 157.69581604003906,
+      "x": 269.6145739264968,
+      "y": 534.2376756313198,
+      "width": 141.24789428710938,
       "height": 60,
       "angle": 0,
       "strokeColor": "#1e1e1e",
@@ -2122,20 +2130,20 @@
       "index": "at",
       "roundness": null,
       "seed": 321483127,
-      "version": 6,
-      "versionNonce": 1156725209,
+      "version": 12,
+      "versionNonce": 1485758266,
       "isDeleted": false,
       "boundElements": [],
-      "updated": 1768023979488,
+      "updated": 1768037794755,
       "link": null,
       "locked": false,
-      "text": "5. Fill Metadata<br>\n(Protocol, Length,\nChecksum)",
+      "text": "5. Fill Metadata\n(Protocol, Length,\nChecksum)",
       "fontSize": 16,
       "fontFamily": 5,
       "textAlign": "center",
       "verticalAlign": "middle",
       "containerId": "GhvEnIOUKl9r3yOM-QZsh",
-      "originalText": "5. Fill Metadata<br>(Protocol, Length, Checksum)",
+      "originalText": "5. Fill Metadata\n(Protocol, Length, Checksum)",
       "autoResize": true,
       "lineHeight": 1.25
     },
@@ -2179,9 +2187,9 @@
     {
       "id": "DE8tIF5SKjGEvcwyqv7AY",
       "type": "text",
-      "x": 349.0261535644531,
-      "y": 679.3000183105469,
-      "width": 324.44769287109375,
+      "x": 421.5809181912298,
+      "y": 679.2041577865559,
+      "width": 198.27182006835938,
       "height": 40,
       "angle": 0,
       "strokeColor": "#1e1e1e",
@@ -2196,20 +2204,20 @@
       "index": "av",
       "roundness": null,
       "seed": 2058796983,
-      "version": 5,
-      "versionNonce": 1088387897,
+      "version": 12,
+      "versionNonce": 1850059686,
       "isDeleted": false,
       "boundElements": [],
-      "updated": 1768023979487,
+      "updated": 1768037818380,
       "link": null,
       "locked": false,
-      "text": "6. netif_receive_skb(skb)<br>\"You take it\nfrom here!\"",
+      "text": "6. netif_receive_skb(skb)\n\"You take it from here!\"",
       "fontSize": 16,
       "fontFamily": 5,
       "textAlign": "center",
       "verticalAlign": "middle",
       "containerId": "UItKSIIIgjiBrvfaJlMdK",
-      "originalText": "6. netif_receive_skb(skb)<br>\"You take it from here!\"",
+      "originalText": "6. netif_receive_skb(skb)\n\"You take it from here!\"",
       "autoResize": true,
       "lineHeight": 1.25
     },

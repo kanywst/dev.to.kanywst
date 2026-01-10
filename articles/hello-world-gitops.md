@@ -28,7 +28,11 @@ There are a few key reasons why I decided to switch to this workflow:
 
 ## How it works
 
-The setup is surprisingly simple. I have a GitHub Actions workflow that listens for changes in my `articles/` directory. You can find the complete source for this setup in my repository: [kanywst/dev.to.kanywst](https://github.com/kanywst/dev.to.kanywst).
+The setup is surprisingly simple. Here is the workflow visualization:
+
+![github actions workflow](./assets/hello-world-gitops/github-action-workflow.png)
+
+I have a GitHub Actions workflow that listens for changes in my `articles/` directory. You can find the complete source for this setup in my repository: [kanywst/dev.to.kanywst](https://github.com/kanywst/dev.to.kanywst).
 
 ```yaml
 on:

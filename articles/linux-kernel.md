@@ -1,12 +1,13 @@
 ---
-title: "Linux Kernel Architecture: From Ring 0 to Network Stack & eBPF"
+title: 'Linux Kernel Architecture: From Ring 0 to Network Stack & eBPF'
 published: false
-description: "A deep dive into Linux kernel fundamentals, system calls, the CPU protection rings, and the packet flow within the network stack. Learn how sk_buff works and where eBPF (XDP/TC) fits in."
+description: 'A deep dive into Linux kernel fundamentals, system calls, the CPU protection rings, and the packet flow within the network stack. Learn how sk_buff works and where eBPF (XDP/TC) fits in.'
 tags:
   - linux
   - kernel
   - ebpf
   - programming
+id: 3161925
 ---
 
 # Introduction

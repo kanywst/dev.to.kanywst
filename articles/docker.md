@@ -481,4 +481,4 @@ We've successfully peeled back every layer of the Docker onion. What started as 
 
 Now that we know `containerd` and the `shim` are the real workhorses, the relationship between Kubernetes and Docker starts to make a lot more sense. It’s not just about 'running containers' anymore; it’s about standards and architecture.
 
-This deep dive has only fueled my curiosity further. How exactly did the industry drift from Docker to Kubernetes? What is the messy history behind their breakup and the rise of OCI? I think that’s exactly what I need to investigate next."
+This deep dive has only fueled my curiosity further. How exactly did the industry drift from Docker to Kubernetes? What is the messy history behind their breakup and the rise of OCI? I think that’s exactly what I need to investigate next.

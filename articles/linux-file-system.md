@@ -1,8 +1,13 @@
 ---
-title: "Linux File System Architecture: A Deep Dive into VFS, Inodes, and Storage"
+title: 'Linux File System Architecture: A Deep Dive into VFS, Inodes, and Storage'
 published: false
-description: "In Linux, 'everything is a file'—but how does that actually work? I explore the architecture behind VFS, Inodes, and how data lives on Disks vs RAM."
-tags: ["linux", "kernel", "systems", "learning"]
+description: 'In Linux, ''everything is a file''—but how does that actually work? I explore the architecture behind VFS, Inodes, and how data lives on Disks vs RAM.'
+tags:
+  - linux
+  - kernel
+  - systems
+  - learning
+id: 3161782
 ---
 
 # Introduction

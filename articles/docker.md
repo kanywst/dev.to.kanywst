@@ -1,11 +1,12 @@
 ---
-title: "Docker: Internal Architecture"
+title: 'Docker: Internal Architecture'
 published: false
-description: "Deep dive into Docker's internal architecture: dockerd, containerd, runc, and kernel namespaces."
-tags: ["docker", "container", "linux"]
-# cover_image: "https://..."
-# series: "My Series"
-# canonical_url: ""
+description: 'Deep dive into Docker''s internal architecture: dockerd, containerd, runc, and kernel namespaces.'
+tags:
+  - docker
+  - container
+  - linux
+id: 3163436
 ---
 
 # Introduction

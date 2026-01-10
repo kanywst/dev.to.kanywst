@@ -44,19 +44,19 @@ Simply put, it's the difference between **"privileges that kill the entire PC if
 The CPU has four levels, from 0 to 3, but Linux (and Windows) typically uses only the **two ends of the spectrum**.
 
 * **Ring 0 (Kernel Mode / Privileged Mode)**
-* **Inhabitants:** Linux Kernel (Device Drivers, Memory Management, etc.)
-* **Privileges:** **Omnipotent.**
-* Can execute all CPU instructions.
-* Direct access to all physical memory, hard disks, NICs, and other hardware.
-* **Risk:** A bug here causes the entire PC to freeze or reboot spontaneously (Kernel Panic / Blue Screen of Death).
+  * **Inhabitants:** Linux Kernel (Device Drivers, Memory Management, etc.)
+  * **Privileges:** **Omnipotent.**
+    * Can execute all CPU instructions.
+    * Direct access to all physical memory, hard disks, NICs, and other hardware.
+  * **Risk:** A bug here causes the entire PC to freeze or reboot spontaneously (Kernel Panic / Blue Screen of Death).
 
 * **Ring 3 (User Mode / Non-Privileged Mode)**
-* **Inhabitants:** User applications (Web Browser, `ls` command, your Python code, etc.)
-* **Privileges:** **Restricted.**
-* Direct access to hardware is prohibited.
-* Peeking into arbitrary memory is prohibited.
-* Actions like "reading a file" must be requested from Ring 0 via system calls.
-* **Risk:** A bug here only results in the application being "forcefully terminated," leaving the OS itself unharmed.
+  * **Inhabitants:** User applications (Web Browser, `ls` command, your Python code, etc.)
+  * **Privileges:** **Restricted.**
+    * Direct access to hardware is prohibited.
+    * Peeking into arbitrary memory is prohibited.
+    * Actions like "reading a file" must be requested from Ring 0 via system calls.
+  * **Risk:** A bug here only results in the application being "forcefully terminated," leaving the OS itself unharmed.
 
 #### 1-2-2. Why Separate Them?
 

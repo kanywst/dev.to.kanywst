@@ -1,8 +1,14 @@
 ---
-title: "Velo: A Cross-Platform Network Speed Monitor Built with Go & Wails"
+title: 'Velo: A Cross-Platform Network Speed Monitor Built with Go & Wails'
 published: true
-description: "An open-source desktop tool to automatically monitor and visualize your internet connection speed over time."
-tags: ["showdev", "wails", "golang", "vue"]
+description: An open-source desktop tool to automatically monitor and visualize your internet connection speed over time.
+tags:
+  - showdev
+  - wails
+  - golang
+  - vue
+id: 3163195
+date: '2026-01-10T19:14:18Z'
 ---
 
 # Introduction

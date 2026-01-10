@@ -8,7 +8,7 @@ tags:
   - systems
   - learning
 id: 3161782
-cover_image: https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/linux-file-system/everything-is-a-file.png
+cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/linux-file-system/everything-is-a-file.png'
 ---
 
 # Introduction

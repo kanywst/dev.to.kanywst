@@ -7,7 +7,8 @@ tags:
   - container
   - linux
 id: 3163436
-cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/docker/devto_cover_docker_meme.png"
+cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/docker/devto_cover_docker_meme.png'
+date: '2026-01-10T22:17:04Z'
 ---
 
 # Introduction

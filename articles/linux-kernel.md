@@ -9,6 +9,7 @@ tags:
   - programming
 cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/linux-kernel/linux-kernel.png'
 id: 3161925
+date: '2026-01-10T06:13:01Z'
 ---
 
 # Introduction

@@ -8,7 +8,7 @@ tags:
   - kubernetes
   - devops
 id: 3164168
-cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/sbom-and-code-signing/supply-chain-attack-meme.png"
+cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/sbom-and-code-signing/supply-chain-attack-meme.png'
 ---
 
 # Introduction

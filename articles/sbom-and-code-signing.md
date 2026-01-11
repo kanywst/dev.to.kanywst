@@ -1,9 +1,13 @@
 ---
-title: "Supply Chain Security: A Deep Dive into SBOM and Code Signing"
+title: 'Supply Chain Security: A Deep Dive into SBOM and Code Signing'
 published: false
-description: "A deep dive into SBOM generation with Syft, keyless signing with Cosign, and Kubernetes use cases to protect against supply chain attacks."
-tags: ["security", "sbom", "kubernetes", "devops"]
-# cover_image: "https://..."
+description: 'A deep dive into SBOM generation with Syft, keyless signing with Cosign, and Kubernetes use cases to protect against supply chain attacks.'
+tags:
+  - security
+  - sbom
+  - kubernetes
+  - devops
+id: 3164168
 ---
 
 # Introduction

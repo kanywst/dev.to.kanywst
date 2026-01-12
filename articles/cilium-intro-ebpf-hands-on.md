@@ -1,10 +1,14 @@
 ---
-title: "Experiencing eBPF with Cilium"
+title: Experiencing eBPF with Cilium
 published: false
-description: "Through Cilium, experience the visualization (Hubble), L7 control, Kubernetes Validating Admission Policy, and SPIRE (mTLS) integration brought by eBPF."
-tags: ["cilium", "ebpf", "kubernetes", "network"]
-# cover_image: "https://..."
-series: "Linux Kernel"
+description: 'Through Cilium, experience the visualization (Hubble), L7 control, Kubernetes Validating Admission Policy, and SPIRE (mTLS) integration brought by eBPF.'
+tags:
+  - cilium
+  - ebpf
+  - kubernetes
+  - network
+series: Linux Kernel
+id: 3165668
 ---
 
 # Introduction

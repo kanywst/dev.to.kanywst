@@ -1,6 +1,6 @@
 ---
 title: 'eBPF: Experiencing eBPF with Cilium'
-published: false
+published: true
 description: 'Through Cilium, experience the visualization (Hubble), L7 control, Kubernetes Validating Admission Policy, and SPIRE (mTLS) integration brought by eBPF.'
 tags:
   - cilium

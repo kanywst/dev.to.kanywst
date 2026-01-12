@@ -10,6 +10,7 @@ tags:
 id: 3161782
 cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/linux-file-system/everything-is-a-file.png'
 date: '2026-01-10T03:21:42Z'
+series: "Linux Kernel"
 ---
 
 # Introduction

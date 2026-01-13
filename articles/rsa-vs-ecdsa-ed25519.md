@@ -8,7 +8,7 @@ tags:
   - performance
   - security
 id: 3169445
-cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/rsa-vs-ecdsa-ed25519/meme.jpg"
+cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/rsa-vs-ecdsa-ed25519/meme.png"
 ---
 
 # Introduction

@@ -14,10 +14,11 @@ date: '2026-01-13T14:33:43Z'
 
 # Introduction
 
-Digital signatures are the bedrock of web security, blockchains, and TLS communication.
-We often understand them as "signing with a private key and verifying with a public key," but have you ever felt the numbers behind them? **"Why is RSA verification so fast?"** **"Why is ECDSA becoming mainstream?"**
+I recently noticed something while profiling a high-throughput Go service: **RSA verification was suspiciously fast.**
 
-In this article, we'll revisit the basics of encryption and signatures, and then dive into a thorough comparison of the performance characteristics of RSA, ECDSA, and the modern Ed25519 using benchmarks in Go.
+I expected ECDSA to beat it everywhere, but the benchmarks told a different story. This rabbit hole led me to rediscover the mechanics of `65537` and why "modern" doesn't always mean "faster" for every operation.
+
+In this article, we'll move past the textbook definitions and dive into the *actual* performance mechanics of RSA, ECDSA, and Ed25519 using Go benchmarks. We will see why legacy systems refuse to die and where the modern algorithms truly shine.
 
 ---
 
@@ -104,14 +105,11 @@ Let's visualize the "strengths and weaknesses" of each algorithm with charts (Re
 
 **RSA (2048)**: Verification is "Godspeed".
 > **Trivia: Why so fast?** <br>
-> The public exponent $e$ used in RSA verification calculation ($s^e \pmod n$) is usually **65537** ($2^{16}+1$). In binary, this is `10000000000000001`, having only two `1` bits. This allows the computer to complete verification with minimal calculation steps.
+> The public exponent $e$ used in RSA verification calculation ($s^e \pmod n$) is usually **65537** ($2^{16}+1$). In binary, this is `10000000000000001`, having only two `1` bits.
 
-#### ❓ Question: "Is such a simple number secure?"
+Using `65537` (0x10001) as a public key might seem insecurely simple—it’s mostly zeros! However, RSA's security relies entirely on the factorization difficulty of the modulus $N$, not the complexity of the exponent $e$. This specific choice is a feature, not a bug: it allows verifiers to use the **Binary Method** to complete calculations with only 17 multiplications, whereas a random exponent would take thousands.
 
-Sharp point. You might think, "Is it okay for part of the key to be a simple fixed value?"
-
-1. **Why is it safe?**: RSA's security relies on "Can you factorize the Public Key ($N$)?" $e$ (65537) is like the "lock mechanism (turn right to close)". Even if the mechanism is public, the matching **Private Key ($d$)** cannot be created unless $N$ is factorized, so it is safe.
-2. **Why does fewer 1s mean faster?**: Computers are good at "squaring". Calculating $x^{65537}$ isn't done by multiplying 60,000 times foolishly. Instead, it repeats "squaring" 16 times ($x^{65536}$) and multiplies the original $x$ just once at the end (total 17 times). This is the trick of "Fewer 1 bits = Faster" (Binary Method).
+This architectural trade-off is why RSA verification remains incredibly lightweight compared to its heavy signing process.
 
 ![binary method](./assets/rsa-vs-ecdsa-ed25519/binary-method.png)
 
@@ -260,8 +258,8 @@ BenchmarkEd25519_Verify-8          27704          45,312 ns/op  (approx 0.045 ms
 
 #### Interpretation of Results
 
-* **RSA**: Key generation is devastatingly slow, but **verification is 1.5x faster than Ed25519**. It still has value in legacy environments where minimizing client-side load is critical.
-* **Ed25519**: Reigns supreme in signing speed and has the best overall balance.
+* **RSA**: Key generation is devastatingly slow (90ms!), but look at that **RSA_Verify** (0.03ms). It's screaming fast. This explains why some legacy systems refuse to die—if your bottleneck is strictly verification (like in some high-volume JWT validation scenarios), RSA is still a beast.
+* **Ed25519**: Reigns supreme in signing speed and offers the best overall balance. For any new system, this is the default choice.
 
 ## Summary
 

@@ -1,8 +1,13 @@
 ---
-title: "Digital Signatures: Mechanics and Go Benchmarks (RSA vs ECDSA vs Ed25519)"
+title: 'Digital Signatures: Mechanics and Go Benchmarks (RSA vs ECDSA vs Ed25519)'
 published: false
-description: "A deep dive into digital signature algorithms, comparing their mechanics and performance using Go benchmarks on Apple Silicon."
-tags: ["go", "cryptography", "performance", "security"]
+description: 'A deep dive into digital signature algorithms, comparing their mechanics and performance using Go benchmarks on Apple Silicon.'
+tags:
+  - go
+  - cryptography
+  - performance
+  - security
+id: 3169445
 ---
 
 # Introduction

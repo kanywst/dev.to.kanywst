@@ -9,6 +9,7 @@ tags:
   - internal
 id: 3171783
 cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/go-vs-rust/go-vs-rust-meme.png'
+date: '2026-01-14T13:56:55Z'
 ---
 
 # Introduction

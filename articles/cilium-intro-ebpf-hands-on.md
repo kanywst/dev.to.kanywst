@@ -9,7 +9,7 @@ tags:
   - network
 series: Linux Kernel
 id: 3165668
-cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/cilium-intro-hands-on/ebpf_clippy.png'
+cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/cilium-intro-hands-on/ebpf_meme.png'
 date: '2026-01-12T07:21:00Z'
 ---
 

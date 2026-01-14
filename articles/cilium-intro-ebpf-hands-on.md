@@ -55,7 +55,7 @@ Traditional firewalls identify traffic by "IP Address," but in the container wor
 ### Prerequisites
 
 * Docker, Kind, kubectl
-* Cilium CLI (`brew install cilium-cli`, etc.)
+* Cilium CLI (`brew install cilium-cli`, etc...)
 
 ### Step 1: Create a Kind Cluster
 

@@ -1,8 +1,13 @@
 ---
-title: "Go vs Rust: Deep Dive into OS Threads, GC, and CPU Limits"
+title: 'Go vs Rust: Deep Dive into OS Threads, GC, and CPU Limits'
 published: false
-description: "Dissecting everything from OS kernels to Go's GC and Rust's Ownership model with real benchmarks."
-tags: ["go", "rust", "performance", "internal"]
+description: Dissecting everything from OS kernels to Go's GC and Rust's Ownership model with real benchmarks.
+tags:
+  - go
+  - rust
+  - performance
+  - internal
+id: 3171783
 ---
 
 # Introduction

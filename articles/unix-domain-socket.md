@@ -1,6 +1,6 @@
 ---
 title: 'The Magic of .sock: Why Modern Infrastructure Relies on Unix Domain Sockets'
-published: false
+published: true
 description: 'A deep dive into the mechanics of Unix Domain Sockets, Peer Authentication, and why they are the backbone of zero-trust security in Docker and SPIRE.'
 tags:
   - linux

@@ -8,6 +8,7 @@ tags:
   - go
   - infrastructure
 id: 3174398
+cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/socket/unix-domain-socket.png"
 ---
 
 # Introduction

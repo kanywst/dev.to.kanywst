@@ -1,6 +1,6 @@
 ---
 title: 'gmk: Stop Typing Git URLs'
-published: false
+published: true
 description: 'A stylish, interactive CLI to bookmark and clone your favorite Git repositories.'
 tags:
   - showdev

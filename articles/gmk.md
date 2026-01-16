@@ -1,12 +1,13 @@
 ---
-title: "gmk: Stop Typing Git URLs"
+title: 'gmk: Stop Typing Git URLs'
 published: false
-description: "A stylish, interactive CLI to bookmark and clone your favorite Git repositories."
+description: 'A stylish, interactive CLI to bookmark and clone your favorite Git repositories.'
 tags:
   - showdev
   - rust
   - cli
   - git
+id: 3176769
 ---
 
 # 😫 The Problem

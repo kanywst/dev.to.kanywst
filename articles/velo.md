@@ -9,6 +9,7 @@ tags:
   - vue
 id: 3163195
 date: '2026-01-10T19:14:18Z'
+series: ShowDev
 ---
 
 # Introduction

@@ -1,5 +1,5 @@
 ---
-title: 'gmk: Stop Typing Git URLs'
+title: 'gmk(Git Mark): Stop Typing Git URLs'
 published: true
 description: 'A stylish, interactive CLI to bookmark and clone your favorite Git repositories.'
 tags:

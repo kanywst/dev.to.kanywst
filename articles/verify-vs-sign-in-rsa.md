@@ -18,9 +18,11 @@ It is a well-known fact that "RSA's security depends on the difficulty of prime 
 
 That is, the following calculation:
 
+{% katex %}
 $$
 x^y \pmod n
 $$
+{% endkatex %}
 
 Actually, depending on how parameters are chosen, this calculation can be a "process that finishes in an instant" or a "heavy process that eats up CPU resources."
 

@@ -1,6 +1,6 @@
 ---
 title: 'RSA Performance Anatomy: Why is ''Verification'' Blazing Fast and ''Signing'' Extremely Slow?'
-published: false
+published: true
 description: Explaining the mechanism of the Binary Method (Square-and-Multiply) in RSA encryption and how exponent selection affects performance from mathematical and implementation perspectives.
 tags:
   - algorithms
@@ -271,5 +271,5 @@ Finally, let's summarize "Who holds what" and "What calculations they perform."
   * {% katex inline %}e{% endkatex %}: **Public Exponent** (Usually {% katex inline %}65537{% endkatex %})
   * {% katex inline %}n{% endkatex %}: Modulus (Listed in certificate)
 * **Calculation**: {% katex inline %}\text{Check} = s^e \pmod n{% endkatex %}
-* **Judgment**: If the calculation result matches the local {% katex inline %}m{% endkatex %}, it passes.
-* **Feature**: Since there are few "1"s in the bits of {% katex inline %}e{% endkatex %}, the calculation finishes in an instant.
+* **Judgment**: If the calculation result matches the local {% katex inline %}m{% endkatex %} , it passes.
+* **Feature**: Since there are few "1"s in the bits of {% katex inline %}e{% endkatex %} , the calculation finishes in an instant.

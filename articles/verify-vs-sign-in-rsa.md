@@ -1,9 +1,14 @@
 ---
-title: "RSA Performance Anatomy: Why is 'Verification' Blazing Fast and 'Signing' Extremely Slow?"
+title: 'RSA Performance Anatomy: Why is ''Verification'' Blazing Fast and ''Signing'' Extremely Slow?'
 published: false
-description: "Explaining the mechanism of the Binary Method (Square-and-Multiply) in RSA encryption and how exponent selection affects performance from mathematical and implementation perspectives."
-tags: ["algorithms", "cryptography", "math", "performance"]
+description: Explaining the mechanism of the Binary Method (Square-and-Multiply) in RSA encryption and how exponent selection affects performance from mathematical and implementation perspectives.
+tags:
+  - algorithms
+  - cryptography
+  - math
+  - performance
 series: Cryptography
+id: 3178615
 ---
 
 # Introduction

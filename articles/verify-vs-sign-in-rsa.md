@@ -18,9 +18,7 @@ It is a well-known fact that "RSA's security depends on the difficulty of prime 
 
 That is, the following calculation:
 
-{% katex %}
-x^y \pmod n
-{% endkatex %}
+{% katex %}x^y \pmod n{% endkatex %}
 
 Actually, depending on how parameters are chosen, this calculation can be a "process that finishes in an instant" or a "heavy process that eats up CPU resources."
 
@@ -28,37 +26,37 @@ In this article, I will explain the behavior of the **"Binary Method"** (the int
 
 ## 0. The Big Picture: Who Uses Which Number?
 
-Before diving into the algorithm details, let's confirm the flow of "Encryption" and "Signing," and the numbers ($e$ and $d$) used by the actors.
+Before diving into the algorithm details, let's confirm the flow of "Encryption" and "Signing," and the numbers ({% katex %}e{% endkatex %} and {% katex %}d{% endkatex %}) used by the actors.
 The key point here is that **the "person who created the keys (the owner of the key pair)" decides the numbers.**
 
 ### Case A: Encrypted Communication (Delivering Secrets)
 
 Here is a detailed sequence that answers the following three questions:
 
-1. **How is $d$ determined?** $\rightarrow$ Calculated via the Extended Euclidean Algorithm.
-2. **How are keys distributed?** $\rightarrow$ Written in an X.509 certificate and sent.
-3. **How is text calculated?** $\rightarrow$ Padded and converted into a huge integer.
+1. **How is {% katex %}d{% endkatex %} determined?** {% katex %}\rightarrow{% endkatex %} Calculated via the Extended Euclidean Algorithm.
+2. **How are keys distributed?** {% katex %}\rightarrow{% endkatex %} Written in an X.509 certificate and sent.
+3. **How is text calculated?** {% katex %}\rightarrow{% endkatex %} Padded and converted into a huge integer.
 
 ![cryption](./assets/verify-vs-sign-in-rsa/cryption.png)
 
-* **You (Client)**: Use the $e$ ($65537$) decided by the server $\rightarrow$ **Calculation is Fast**
-* **Server**: Uses the $d$ (Huge) decided by itself $\rightarrow$ **Calculation is Slow**
+* **You (Client)**: Use the {% katex %}e{% endkatex %} ({% katex %}65537{% endkatex %}) decided by the server {% katex %}\rightarrow{% endkatex %} **Calculation is Fast**
+* **Server**: Uses the {% katex %}d{% endkatex %} (Huge) decided by itself {% katex %}\rightarrow{% endkatex %} **Calculation is Slow**
 
 #### Technical Supplement
 
-**1. How is $d$ (Private Key) calculated?**
-$d$ is not just a random number. It is mathematically determined as the unique **"number that becomes 1 when multiplied by $e$ and divided (Modular Multiplicative Inverse)."**
+**1. How is {% katex %}d{% endkatex %} (Private Key) calculated?**
+{% katex %}d{% endkatex %} is not just a random number. It is mathematically determined as the unique **"number that becomes 1 when multiplied by {% katex %}e{% endkatex %} and divided (Modular Multiplicative Inverse)."**
 Specifically, it is found using an algorithm called the **Extended Euclidean Algorithm**.
 
-$$
+{% katex %}
 e \cdot d \equiv 1 \pmod{(p-1)(q-1)}
-$$
+{% endkatex %}
 
-Only the server, which knows $p$ and $q$ (prime factors), can solve this equation and derive $d$.
+Only the server, which knows {% katex %}p{% endkatex %} and {% katex %}q{% endkatex %} (prime factors), can solve this equation and derive {% katex %}d{% endkatex %}.
 
-**2. How is the public key $(e, n)$ distributed?**
+**2. How is the public key {% katex %}(e, n){% endkatex %} distributed?**
 In the web world, raw numbers are not sent abruptly. They are sent stored inside a file format called a **"Digital Certificate (X.509)."**
-The browser parses the content of the certificate sent from the server (ASN.1 decoding) and extracts $n$ and $e$ from the "Pub Key" field.
+The browser parses the content of the certificate sent from the server (ASN.1 decoding) and extracts {% katex %}n{% endkatex %} and {% katex %}e{% endkatex %} from the "Pub Key" field.
 
     Certificate:
         Data:
@@ -75,7 +73,7 @@ It doesn't just mean turning it into `0101...`. In RSA, to prevent the property 
 * **Padding**: Stuffing random numbers before and after the message (Standards like PKCS#1 v1.5 or OAEP).
 * **Integer Conversion**: Interpreting the padded byte sequence (e.g., 256 bytes) directly as **"a single huge integer."**
 
-The calculation $m^e$ is performed on this huge integer $m$ created in this way.
+The calculation {% katex %}m^e{% endkatex %} is performed on this huge integer {% katex %}m{% endkatex %} created in this way.
 
 ---
 
@@ -86,14 +84,14 @@ Here, we clarify the internal processes: "Why hash it?" and "What is being compa
 
 ![verify](./assets/verify-vs-sign-in-rsa/verify.png)
 
-* **Server**: Uses the $d$ (Huge) decided by itself $\rightarrow$ **Calculation is Slow**
-* **You (Client)**: Use the $e$ ($65537$) decided by the server $\rightarrow$ **Calculation is Fast**
+* **Server**: Uses the {% katex %}d{% endkatex %} (Huge) decided by itself {% katex %}\rightarrow{% endkatex %} **Calculation is Slow**
+* **You (Client)**: Use the {% katex %}e{% endkatex %} ({% katex %}65537{% endkatex %}) decided by the server {% katex %}\rightarrow{% endkatex %} **Calculation is Fast**
 
 #### Technical Supplement
 
 **1. Why "Hash" instead of signing data directly?**
 
-Since there is a limit to the data size RSA can calculate (the bit length of $n$, e.g., 256 bytes), huge files (like images or long HTML) cannot be thrown directly into the calculation formula $m^d$.
+Since there is a limit to the data size RSA can calculate (the bit length of {% katex %}n{% endkatex %}, e.g., 256 bytes), huge files (like images or long HTML) cannot be thrown directly into the calculation formula {% katex %}m^d{% endkatex %}.
 Therefore, data of any length is passed through a **"Hash Function"** to shrink it to a fixed length (e.g., 32 bytes for SHA-256) before signing.
 
 **2. What is the signature padding (PKCS#1 v1.5) doing?**
@@ -103,16 +101,16 @@ The verifier side looks at the recovered data, determines "Oh, this is a SHA-256
 
 **3. What is the essence of Verification?**
 
-When the verification formula $s^e \pmod n$ is executed, the **"Hash value padded by the signer"** pops out as the calculation result.
+When the verification formula {% katex %}s^e \pmod n{% endkatex %} is executed, the **"Hash value padded by the signer"** pops out as the calculation result.
 This is compared with the **"Hash value calculated from the data received by yourself,"** and if even 1 bit differs, it is judged as "tampering" or "spoofing," resulting in an error.
 
 ---
 
 ## 1. What is the Binary Method?
 
-When a computer calculates a huge exponent like $x^{100}$, it does not naively repeat multiplication 99 times. It uses an algorithm called the **Binary Method (Square-and-Multiply)** to drastically reduce the computational complexity.
+When a computer calculates a huge exponent like {% katex %}x^{100}{% endkatex %}, it does not naively repeat multiplication 99 times. It uses an algorithm called the **Binary Method (Square-and-Multiply)** to drastically reduce the computational complexity.
 
-The rules of the algorithm are simple. Convert the exponent ($y$) to a "binary number" and perform the following operations starting from the most significant bit:
+The rules of the algorithm are simple. Convert the exponent ({% katex %}y{% endkatex %}) to a "binary number" and perform the following operations starting from the most significant bit:
 
 1. **If the bit is 0**:
     **Square** the current value.
@@ -147,66 +145,68 @@ You can see how it "divides every time it loops" instead of "calculating a huge 
         return result
     }
 
-## 2. Why Verification is "Blazing Fast" (The Magic of $e$)
+## 2. Why Verification is "Blazing Fast" (The Magic of {% katex %}e{% endkatex %})
 
 In RSA verification processing (or public key encryption), the following calculation is performed:
 
-$$
+{% katex %}
 \text{Verification} \equiv s^e \pmod n
-$$
+{% endkatex %}
 
-The public exponent $e$ used here is a **value that humans can arbitrarily set** as long as it meets security requirements. Therefore, **$65537$** is conventionally chosen to minimize the calculation cost in the Binary Method.
+The public exponent {% katex %}e{% endkatex %} used here is a **value that humans can arbitrarily set** as long as it meets security requirements. Therefore, **{% katex %}65537{% endkatex %}** is conventionally chosen to minimize the calculation cost in the Binary Method.
 
 When this is expressed in binary, the "intention" becomes clearly visible.
 
-$$
+{% katex %}
 65537_{10} = 10000000000000001_2
-$$
+{% endkatex %}
 
 * **Bit length**: 17 bits
 * **Number of 1s (Hamming Weight)**: Only 2 (Just the beginning and end)
 
 ### Steps in Binary Method
 
-The Binary Method follows the rule: **"Every time you multiply, divide by $n$ to keep it small."**
+The Binary Method follows the rule: **"Every time you multiply, divide by {% katex %}n{% endkatex %} to keep it small."**
 
-1. **Start**: $s$
-2. **0 continues for 15 times**: Do "**Square** and divide by $n$" 16 times.
-3. **Last is 1**: Square, and finally **Multiply** by $s$ once, and divide by $n$.
+1. **Start**: {% katex %}s{% endkatex %}
+2. **0 continues for 15 times**: Do "**Square** and divide by {% katex %}n{% endkatex %}" 16 times.
+3. **Last is 1**: Square, and finally **Multiply** by {% katex %}s{% endkatex %} once, and divide by {% katex %}n{% endkatex %}.
 
 It completes in just about **17 operations**. This is why RSA verification (and encryption with a public key) is "blazing fast."
 
 65537 is a number with a "miraculous balance" that satisfies all three of the following conditions:
 
 1. **Fast in Binary Method** (Few 1s: `10...01`)
-2. **Is a Prime Number** (Mathematically easy to use: Fermat Prime $F_4$)
+2. **Is a Prime Number** (Mathematically easy to use: Fermat Prime {% katex %}F_4{% endkatex %})
 3. **Sufficiently Large** (Prevents attacks on numbers that are too small)
 
-## 3. Why Signing is "Extremely Slow" (The Constraint of $d$)
+## 3. Why Signing is "Extremely Slow" (The Constraint of {% katex %}d{% endkatex %})
 
 On the other hand, the calculation for signature creation (or private key decryption) is as follows:
 
-$$
+{% katex %}
 \text{Signature} \equiv m^d \pmod n
-$$
+{% endkatex %}
 
-This private exponent $d$ cannot be decided arbitrarily by humans. It is automatically determined mathematically as it must satisfy the following congruence:
+This private exponent {% katex %}d{% endkatex %} cannot be decided arbitrarily by humans. It is automatically determined mathematically as it must satisfy the following congruence:
 
-$$
+{% katex %}
 e \cdot d \equiv 1 \pmod{\phi(n)}
-$$
-*(Here $\phi(n)$ is Euler's totient function)*
+{% endkatex %}
 
-For security reasons, relative to the modulus $n$ (e.g., 2048 bits), $d$ will be of a similar bit length, and its bit pattern will be close to random.
+*(Here {% katex %}\phi(n){% endkatex %} is Euler's totient function)*
 
-$$
+For security reasons, relative to the modulus {% katex %}n{% endkatex %} (e.g., 2048 bits), {% katex %}d{% endkatex %} will be of a similar bit length, and its bit pattern will be close to random.
+
+{% katex %}
 d \approx 1101011...(\text{snip})...00110_2
-$$
+{% endkatex %}
 
 * **Bit length**: Approx. 2048 bits (In the case of RSA-2048)
 * **Number of 1s**: Averages to about half the bit length, meaning **approx. 1024**
 
 ### Steps in Binary Method
+
 1.  **Square**: Occurs for the number of digits, so approx. **2048 times**.
 2.  **Multiply**: Occurs every time a bit is 1, so approx. **1024 times**.
 
@@ -214,29 +214,29 @@ $$
 
 ---
 
-## 4. Why Not Make $d$ an "Easy-to-Calculate Value" Too?
+## 4. Why Not Make {% katex %}d{% endkatex %} an "Easy-to-Calculate Value" Too?
 
-Here, a natural question arises: "If we adjust $e$ so that $d$ also becomes a simple number (a number with small Hamming weight) like $65537$, wouldn't signing become fast too?"
+Here, a natural question arises: "If we adjust {% katex %}e{% endkatex %} so that {% katex %}d{% endkatex %} also becomes a simple number (a number with small Hamming weight) like {% katex %}65537{% endkatex %}, wouldn't signing become fast too?"
 
 However, this invites a **fatal vulnerability** in cryptographic theory.
 
-It has been proven that if $d$ is small, there are attack methods (**Wiener's Attack** or **Boneh-Durfee Attack**, etc.) that can efficiently recover $d$ from the public $e$ and $n$.
+It has been proven that if {% katex %}d{% endkatex %} is small, there are attack methods (**Wiener's Attack** or **Boneh-Durfee Attack**, etc.) that can efficiently recover {% katex %}d{% endkatex %} from the public {% katex %}e{% endkatex %} and {% katex %}n{% endkatex %}.
 
-In other words, the fact that $d$ is a huge, complex number is the very foundation of RSA's security: **"Unless $n$ can be factorized, $d$ can absolutely not be guessed."**
+In other words, the fact that {% katex %}d{% endkatex %} is a huge, complex number is the very foundation of RSA's security: **"Unless {% katex %}n{% endkatex %} can be factorized, {% katex %}d{% endkatex %} can absolutely not be guessed."**
 
 ## 5. "Server's Suffering" in TLS
 
 This asymmetric performance characteristic imposes a heavy burden on the server side in TLS (SSL) communication.
 
 ### RSA Key Exchange (Pre-TLS 1.2)
-* **Client**: $m^e$ (Encrypt) $\rightarrow$ **Blazing Fast**
-* **Server**: $c^d$ (Decrypt) $\rightarrow$ **Extremely Slow**
+* **Client**: {% katex %}m^e{% endkatex %} (Encrypt) {% katex %}\rightarrow{% endkatex %} **Blazing Fast**
+* **Server**: {% katex %}c^d{% endkatex %} (Decrypt) {% katex %}\rightarrow{% endkatex %} **Extremely Slow**
 
 ### Authentication by Signature (TLS 1.3 / Modern Web)
-* **Server**: $m^d$ (Create Signature) $\rightarrow$ **Extremely Slow**
-* **Client**: $s^e$ (Verify Signature) $\rightarrow$ **Blazing Fast**
+* **Server**: {% katex %}m^d{% endkatex %} (Create Signature) {% katex %}\rightarrow{% endkatex %} **Extremely Slow**
+* **Client**: {% katex %}s^e{% endkatex %} (Verify Signature) {% katex %}\rightarrow{% endkatex %} **Blazing Fast**
 
-Ultimately, when establishing encrypted communication, the server is always forced to perform "calculations using the private key $d$."
+Ultimately, when establishing encrypted communication, the server is always forced to perform "calculations using the private key {% katex %}d{% endkatex %}."
 In the modern web, where "one server handles tens of thousands of clients," this CPU load cannot be ignored. This is one of the main reasons why **ECDSA (Elliptic Curve Cryptography)**, which has a lighter load on the server, is preferred.
 *(※ ECDSA verification is slower than RSA, but signature creation is much faster than RSA)*
 
@@ -250,20 +250,20 @@ Finally, let's summarize "Who holds what" and "What calculations they perform."
 
 * **Role**: To prove "I am the principal."
 * **Held Values**:
-  * $m$: Hash value of the message
-  * $d$: **Private Exponent** (Huge number, absolutely secret)
-  * $n$: Modulus
-* **Calculation**: $$s = m^d \pmod n$$
+  * {% katex %}m{% endkatex %}: Hash value of the message
+  * {% katex %}d{% endkatex %}: **Private Exponent** (Huge number, absolutely secret)
+  * {% katex %}n{% endkatex %}: Modulus
+* **Calculation**: {% katex %}s = m^d \pmod n{% endkatex %}
 * **Feature**: The Binary Method loops many times, making the calculation cost very high.
 
 ### Verifier (Client, Browser)
 
 * **Role**: To confirm "Is the signature authentic?" and "Has it been tampered with?"
 * **Held Values**:
-  * $s$: Received signature
-  * $m$: Hash value calculated from the message by oneself
-  * $e$: **Public Exponent** (Usually $65537$)
-  * $n$: Modulus (Listed in certificate)
-* **Calculation**: $$\text{Check} = s^e \pmod n$$
-* **Judgment**: If the calculation result matches the local $m$, it passes.
-* **Feature**: Since there are few "1"s in the bits of $e$, the calculation finishes in an instant.
+  * {% katex %}s{% endkatex %}: Received signature
+  * {% katex %}m{% endkatex %}: Hash value calculated from the message by oneself
+  * {% katex %}e{% endkatex %}: **Public Exponent** (Usually {% katex %}65537{% endkatex %})
+  * {% katex %}n{% endkatex %}: Modulus (Listed in certificate)
+* **Calculation**: {% katex %}\text{Check} = s^e \pmod n{% endkatex %}
+* **Judgment**: If the calculation result matches the local {% katex %}m{% endkatex %}, it passes.
+* **Feature**: Since there are few "1"s in the bits of {% katex %}e{% endkatex %}, the calculation finishes in an instant.

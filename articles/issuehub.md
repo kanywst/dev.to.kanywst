@@ -9,8 +9,6 @@ cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/head
 
 # Introduction
 
-👉 **Check it out here:** [https://kanywst.github.io/IssueHub](https://kanywst.github.io/IssueHub)
-
 Let's be real—you want to contribute to Open Source Software (OSS), don't you? You've seen those legendary developers with their green-filled GitHub graphs, and you admire that world. You want to be a part of it. You want to give back to the tools you use every day.
 
 But then, reality hits. **"Where do I even start?"**
@@ -21,7 +19,13 @@ That's exactly why I built **IssueHub**.
 
 I wanted to create a "compass" for developers like us—the ones who have the passion but are lost in the vast ocean of GitHub. IssueHub is designed to aggregate those entry-level opportunities and serve them to you on a silver platter, so you can stop searching and start contributing.
 
+👉 **Check it out here:** [https://kanywst.github.io/IssueHub](https://kanywst.github.io/IssueHub)
+
 ![example](./assets/IssueHub/example.png)
+
+## Links
+
+- **GitHub Repository:** [github.com/kanywst/IssueHub](https://github.com/kanywst/IssueHub)
 
 ---
 

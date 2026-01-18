@@ -2,8 +2,9 @@
 title: "IssueHub: Helping Beginners Find Their First OSS Contribution Opportunities"
 published: false
 description: "help you find 'good first issues' and take your first step into open source."
-tags: ["showdev", "react", "nextjs", "typescript", "opensource"]
+tags: ["showdev", "oss", "nextjs", "typescript"]
 series: ShowDev
+cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/IssueHub/issuehub.png"
 ---
 
 # Introduction

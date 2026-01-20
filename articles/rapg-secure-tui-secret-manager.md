@@ -1,8 +1,13 @@
 ---
-title: "Rapg: TUI-based Secret Manager"
+title: 'Rapg: TUI-based Secret Manager'
 published: false
-description: "A secure, TUI-based secret manager for developers who want to inject secrets directly into processes without writing them to disk."
-tags: ["showdev", "cli", "go", "security"]
+description: 'A secure, TUI-based secret manager for developers who want to inject secrets directly into processes without writing them to disk.'
+tags:
+  - showdev
+  - cli
+  - go
+  - security
+id: 3185168
 ---
 
 # Introduction

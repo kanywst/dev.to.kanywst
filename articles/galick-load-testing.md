@@ -10,6 +10,7 @@ tags:
 series: ShowDev
 id: 3185931
 cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/galick/vegeta.png'
+date: '2026-01-20T18:45:48Z'
 ---
 
 # Introduction

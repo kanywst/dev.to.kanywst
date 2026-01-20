@@ -1,6 +1,6 @@
 ---
 title: 'Rapg: TUI-based Secret Manager'
-published: false
+published: true
 description: 'A secure, TUI-based secret manager for developers who want to inject secrets directly into processes without writing them to disk.'
 tags:
   - showdev
@@ -8,6 +8,7 @@ tags:
   - go
   - security
 id: 3185168
+cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/rapg/rapg_meme.png"
 ---
 
 # Introduction

@@ -9,7 +9,7 @@ tags:
   - showdev
 series: ShowDev
 id: 3185931
-cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/galick/vegeta.png"
+cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/galick/vegeta.png'
 ---
 
 # Introduction

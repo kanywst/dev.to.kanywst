@@ -2,8 +2,10 @@
 title: "Rapg: TUI-based Secret Manager"
 published: false
 description: "A secure, TUI-based secret manager for developers who want to inject secrets directly into processes without writing them to disk."
-tags: ["go", "security", "cli", "opensource"]
+tags: ["showdev", "cli", "go", "security"]
 ---
+
+# Introduction
 
 We've all been there. You join a new project, and the first thing you hear is:
 *"Check the pinned message in Slack for the `.env` file."*
@@ -41,7 +43,7 @@ $ rapg run -- npm start
 When you run this, Rapg:
 
 1. Unlocks your vault (asking for your master password if not cached).
-2. Decrypts only the secrets meant for the environment (e.g., `DATABASE_URL`, `STRIPE_KEY`).
+2. Decrypts only the secrets meant for the environment (e.g., `DB_PASSWORD`, `STRIPE_KEY`).
 3. Spawns your process (`npm start`) with these variables added to its environment.
 
 The secrets never touch your disk. Once the process dies, the secrets are gone.
@@ -49,8 +51,6 @@ The secrets never touch your disk. Once the process dies, the secrets are gone.
 ## A TUI for the Modern Era
 
 CLI tools shouldn't be painful to use. Rapg is built with [Bubble Tea](https://github.com/charmbracelet/bubbletea), giving it a beautiful, keyboard-centric interface.
-
-![Rapg Demo](https://github.com/kanywst/rapg/raw/main/demo.gif)
 
 You can:
 

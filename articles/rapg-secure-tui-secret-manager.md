@@ -10,6 +10,7 @@ tags:
 id: 3185168
 cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/rapg/rapg_meme.png'
 date: '2026-01-20T12:19:15Z'
+series: ShowDev
 ---
 
 # Introduction

@@ -1,10 +1,14 @@
 ---
-title: "Galick: I built the ultimate Load Testing tool (Go + Starlark)"
+title: 'Galick: I built the ultimate Load Testing tool (Go + Starlark)'
 published: false
-description: "Why choose between performance and flexibility? Galick combines Go's speed with Starlark scripting for the best of both worlds."
-tags: ["go", "performance", "testing", "showdev"]
+description: Why choose between performance and flexibility? Galick combines Go's speed with Starlark scripting for the best of both worlds.
+tags:
+  - go
+  - performance
+  - testing
+  - showdev
 series: ShowDev
-# cover_image: "https://..."
+id: 3185931
 ---
 
 # Introduction

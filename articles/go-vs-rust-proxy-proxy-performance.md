@@ -3,7 +3,7 @@ title: "Go vs Rust vs C++: Deep Dive into Reverse Proxy Performance on Mac (Ping
 published: false
 description: "Go excels at concurrency with Goroutines. However, in the reverse proxy world, Rust's Pingora and C++'s Envoy are stealing the spotlight. We dissect the reasons via context switches, memory management, and real-world benchmarks."
 tags: ["go", "rust", "proxy", "performance"]
-# cover_image: "https://..."
+cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/go-vs-rust-proxy-proxy-performance/go-vs-rust-proxy-meme.png"
 series: Go vs Rust
 ---
 

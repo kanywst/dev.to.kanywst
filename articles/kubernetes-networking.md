@@ -1,6 +1,6 @@
 ---
 title: 'Kubernetes Deep Dive: Networking (Service, EndpointSlice, Gateway)'
-published: false
+published: true
 description: 'Understanding Kubernetes Networking resources (Service, EndpointSlice, Ingress, etc.) from internal implementation details.'
 tags:
   - kubernetes

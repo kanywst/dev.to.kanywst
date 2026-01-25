@@ -9,7 +9,8 @@ tags:
   - performance
 series: Go vs Rust
 id: 3193928
-cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/go-vs-rust-proxy-proxy-performance/go-vs-rust-proxy-meme.png"
+cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/go-vs-rust-proxy-proxy-performance/go-vs-rust-proxy-meme.png'
+date: '2026-01-23T16:00:35Z'
 ---
 
 # Introduction

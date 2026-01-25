@@ -1,8 +1,14 @@
 ---
-title: "Kubernetes Deep Dive: Networking (Service, EndpointSlice, Gateway)"
+title: 'Kubernetes Deep Dive: Networking (Service, EndpointSlice, Gateway)'
 published: false
-description: "Understanding Kubernetes Networking resources (Service, EndpointSlice, Ingress, etc.) from internal implementation details."
-tags: ["kubernetes", "networking", "service", "ingress"] series: Kubernetes
+description: 'Understanding Kubernetes Networking resources (Service, EndpointSlice, Ingress, etc.) from internal implementation details.'
+tags:
+  - kubernetes
+  - networking
+  - service
+  - ingress
+series: Kubernetes
+id: 3197127
 ---
 
 # Introduction

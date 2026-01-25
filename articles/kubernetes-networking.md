@@ -9,6 +9,7 @@ tags:
   - ingress
 series: Kubernetes
 id: 3197127
+cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/kubernetes-networking/kube-network-meme.png"
 ---
 
 # Introduction

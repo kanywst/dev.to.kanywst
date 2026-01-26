@@ -1,6 +1,6 @@
 ---
 title: 'Prometheus Deep Dive: Pull Architecture and TSDB Secrets'
-published: false
+published: true
 description: 'A thorough explanation of the internal structure of ''Prometheus,'' the de facto standard for monitoring. Why use the Pull model? How is TSDB memory management (Head Block/WAL) handled? Understand how Prometheus works with diagrams.'
 tags:
   - prometheus

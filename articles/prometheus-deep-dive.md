@@ -9,7 +9,7 @@ tags:
   - o11y
 series: O11y
 id: 3199060
-cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/prometheus/prometheus-meme.png"
+cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/prometheus/prometheus-meme.png'
 ---
 
 # Introduction

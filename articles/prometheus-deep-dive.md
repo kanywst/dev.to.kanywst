@@ -1,11 +1,15 @@
 ---
-title: "Prometheus Deep Dive: Pull Architecture and TSDB Secrets"
-published: true
-description: "A thorough explanation of the internal structure of 'Prometheus,' the de facto standard for monitoring. Why use the Pull model? How is TSDB memory management (Head Block/WAL) handled? Understand how Prometheus works with diagrams."
-tags: ["prometheus", "monitoring", "tsdb","o11y"]
+title: 'Prometheus Deep Dive: Pull Architecture and TSDB Secrets'
+published: false
+description: 'A thorough explanation of the internal structure of ''Prometheus,'' the de facto standard for monitoring. Why use the Pull model? How is TSDB memory management (Head Block/WAL) handled? Understand how Prometheus works with diagrams.'
+tags:
+  - prometheus
+  - monitoring
+  - tsdb
+  - o11y
+series: O11y
+id: 3199060
 cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/prometheus/prometheus-meme.png"
-series: "O11y"
-
 ---
 
 # Introduction

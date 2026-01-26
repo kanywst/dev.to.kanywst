@@ -10,6 +10,7 @@ tags:
 series: O11y
 id: 3199060
 cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/prometheus/prometheus-meme.png'
+date: '2026-01-26T11:40:58Z'
 ---
 
 # Introduction

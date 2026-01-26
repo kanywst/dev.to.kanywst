@@ -1,10 +1,14 @@
 ---
-title: "Thanos Deep Dive: Breaking Through Prometheus's 'Limitations'"
+title: 'Thanos Deep Dive: Breaking Through Prometheus''s ''Limitations'''
 published: false
-description: "Thanos solves the challenges of 'long-term storage' and 'High Availability (HA)' in Prometheus. We thoroughly dissect the architecture of how components like Sidecar, Store Gateway, and Compactor coordinate and utilize object storage."
-tags: ["prometheus", "thanos", "o11y", "s3"]
-# cover_image: "https://..."
-series: "O11y"
+description: 'Thanos solves the challenges of ''long-term storage'' and ''High Availability (HA)'' in Prometheus. We thoroughly dissect the architecture of how components like Sidecar, Store Gateway, and Compactor coordinate and utilize object storage.'
+tags:
+  - prometheus
+  - thanos
+  - o11y
+  - s3
+series: O11y
+id: 3199342
 ---
 
 # Introduction

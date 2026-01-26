@@ -92,30 +92,75 @@ When a query comes in asking, "I want to see data from the past month":
 
 ## 4. Hands-on: Local Demo with Docker Compose
 
-Since Thanos has many components and requires S3, running single binaries locally is difficult.
-It is standard practice to launch the whole set using Docker Compose with a pseudo-S3 (MinIO).
+Running Thanos locally as a standalone binary is difficult because it involves many components and requires S3. The standard approach is to use Docker Compose to launch the entire suite alongside a pseudo-S3 (MinIO).
 
-### Step 1: Create `docker-compose.yaml`
+This time, we will use the latest **Prometheus v3.9.1** and **Thanos v0.40.1** to create a fully functional configuration.
 
-Create a file with the following configuration.
+### Step 1: Create Configuration Files
+
+First, create a working directory and prepare the following three configuration files.
+
+#### 1. `prometheus.yml`
+
+`external_labels` are mandatory so that the Thanos Sidecar can identify the data.
+
+```yaml
+global:
+  scrape_interval: 5s
+  external_labels:
+    monitor: 'prom-1'
+    cluster: 'test-cluster'
+
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+```
+
+#### 2. `bucket_config.yaml`
+
+This contains the connection information for MinIO (S3-compatible storage).
+
+```yaml
+type: S3
+config:
+  bucket: "thanos"
+  endpoint: "minio:9000"
+  insecure: true
+  access_key: "minio"
+  secret_key: "melovethanos"
+```
+
+#### 3. `docker-compose.yaml`
+
+To avoid permission-related troubles, we will configure this to run with `user: root`. We use the `mc` container to automatically create the bucket.
 
 ```yaml
 version: '3.7'
 
 services:
-  # 1. Prometheus with Sidecar
+  # 1. Prometheus
   prometheus:
-    image: prom/prometheus:v2.45.0
+    image: prom/prometheus:v3.9.1
+    container_name: prometheus
     volumes:
       - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
     command:
       - --config.file=/etc/prometheus/prometheus.yml
       - --storage.tsdb.min-block-duration=2h
-      - --storage.tsdb.max-block-duration=2h # Fixed for Upload
+      - --storage.tsdb.max-block-duration=2h
       - --web.enable-lifecycle
+      - --web.enable-admin-api
+    ports:
+      - "9090:9090"
 
+  # 2. Thanos Sidecar (Upload & Proxy)
   sidecar:
-    image: thanosio/thanos:v0.32.2
+    image: thanosio/thanos:v0.40.1
+    container_name: sidecar
+    user: root
     command:
       - sidecar
       - --tsdb.path=/prometheus
@@ -123,53 +168,86 @@ services:
       - --objstore.config-file=/etc/thanos/bucket_config.yaml
     volumes:
       - ./bucket_config.yaml:/etc/thanos/bucket_config.yaml
+      - prometheus_data:/prometheus
     depends_on:
       - minio
+      - prometheus
 
-  # 2. Object Storage (MinIO)
+  # 3. Object Storage (MinIO)
   minio:
     image: minio/minio
+    container_name: minio
     environment:
       MINIO_ROOT_USER: minio
       MINIO_ROOT_PASSWORD: melovethanos
-    command: server /data
+    command: server /data --console-address ":9001"
     ports:
       - "9000:9000"
+      - "9001:9001"
 
-  # 3. Thanos Store Gateway
-  store:
-    image: thanosio/thanos:v0.32.2
-    command:
-      - store
-      - --objstore.config-file=/etc/thanos/bucket_config.yaml
+  # Bucket Creator (One-shot)
+  mc:
+    image: minio/mc
+    container_name: mc
     depends_on:
       - minio
+    entrypoint: >
+      /bin/sh -c "
+      /usr/bin/mc alias set myminio http://minio:9000 minio melovethanos;
+      /usr/bin/mc mb myminio/thanos;
+      exit 0;
+      "
 
-  # 4. Thanos Querier
-  querier:
-    image: thanosio/thanos:v0.32.2
+  # 4. Thanos Store Gateway (Historical Data Access)
+  store:
+    image: thanosio/thanos:v0.40.1
+    container_name: store
+    user: root
+    command:
+      - store
+      - --data-dir=/data
+      - --objstore.config-file=/etc/thanos/bucket_config.yaml
+      - --grpc-address=0.0.0.0:10901
+      - --http-address=0.0.0.0:10902
+    volumes:
+      - ./bucket_config.yaml:/etc/thanos/bucket_config.yaml
+      - store_data:/data
+    depends_on:
+      - minio
     ports:
       - "10902:10902"
+
+  # 5. Thanos Querier (Global View)
+  querier:
+    image: thanosio/thanos:v0.40.1
+    container_name: querier
     command:
       - query
-      - --store=sidecar:10901
-      - --store=store:10901
+      - --endpoint=sidecar:10901
+      - --endpoint=store:10901
+    ports:
+      - "9091:10902"
+    depends_on:
+      - sidecar
+      - store
 
+volumes:
+  prometheus_data:
+  store_data:
 ```
 
-*(Note: The contents of the configuration file are omitted for simplicity, but connection information to MinIO is described in `bucket_config.yaml`)*
-
-### Step 2: Start and Verify
+### Step 2: Startup and Verification
 
 ```bash
 docker-compose up -d
-
 ```
 
-After startup, access `http://localhost:10902` (Thanos Querier), and you will see a UI similar to Prometheus.
-By checking **"Use Deduplication"** here, you can experience Thanos's powerful deduplication feature.
+After startup, access `http://localhost:9091` (Thanos Querier), and a UI similar to Prometheus will appear.
+To check the status of the Store API, click **Stores** in the top menu. Both the Sidecar and the Store Gateway should be marked as "UP".
 
-![thanos example](./assets/thanos/thanos-handson.png)
+With this, the complete stack of "Prometheus (Latest) + MinIO (Past) + Thanos (Unified)" is now running in your local environment.
+
+![handson](./assets/thanos/thanos-handson.png)
 
 ---
 

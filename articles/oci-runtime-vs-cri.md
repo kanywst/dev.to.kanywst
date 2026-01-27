@@ -1,12 +1,14 @@
 ---
-
-title: "Kubernetes Deep Dive: OCI Runtime vs CRI"
+title: 'Kubernetes Deep Dive: OCI Runtime vs CRI'
 published: false
-description: "A deep dive into the clear distinction between OCI Runtime and CRI. We explain the architecture, the historical background of the split, and the technical flow from Kubelet down to the Linux Kernel."
-tags: ["Kubernetes", "Container", "CRI", "OCI"]
-# cover_image: "https://..."
+description: 'A deep dive into the clear distinction between OCI Runtime and CRI. We explain the architecture, the historical background of the split, and the technical flow from Kubelet down to the Linux Kernel.'
+tags:
+  - Kubernetes
+  - Container
+  - CRI
+  - OCI
 series: Kubernetes
-# canonical_url: ""
+id: 3202737
 ---
 
 # Introduction

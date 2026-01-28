@@ -10,6 +10,7 @@ tags:
 series: O11y
 id: 3205854
 cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/node-exporter/node-exporter-meme2.png'
+date: '2026-01-28T18:25:11Z'
 ---
 
 # Introduction

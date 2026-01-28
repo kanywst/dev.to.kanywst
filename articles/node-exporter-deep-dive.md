@@ -2,7 +2,7 @@
 title: "Node Exporter Deep Dive: The Bridge Between the Linux Kernel and Prometheus"
 published: false
 description: "A deep dive into the internal structure of Node Exporter, the foundation of Prometheus monitoring. Exploring interaction with the /proc filesystem, the Collector mechanism, and extensibility via Textfile Collector and Json Exporter."
-tags: ["prometheus", "linux", "monitoring", "go", "internal"]
+tags: ["prometheus", "linux", "node-exporter", "o11y"]
 # cover_image: "https://..."
 series: "O11y"
 ---

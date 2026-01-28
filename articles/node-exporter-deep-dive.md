@@ -1,6 +1,6 @@
 ---
 title: 'Node Exporter Deep Dive: Connecting the Linux Kernel and Prometheus'
-published: false
+published: true
 description: 'A deep dive into the internal structure of Node Exporter, exploring its interaction with the /proc filesystem, the Collector mechanism, and extensibility via Textfile Collector.'
 tags:
   - prometheus
@@ -9,7 +9,7 @@ tags:
   - o11y
 series: O11y
 id: 3205854
-cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/node-exporter/node-exporter-meme.png'
+cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/node-exporter/node-exporter-meme2.png'
 ---
 
 # Introduction

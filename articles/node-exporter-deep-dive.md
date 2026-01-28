@@ -4,6 +4,7 @@ published: false
 description: 'A deep dive into the internal structure of Node Exporter, exploring its interaction with the /proc filesystem, the Collector mechanism, and extensibility via Textfile Collector.'
 tags:
   - prometheus
+  - monitoring
   - linux
   - o11y
 series: O11y

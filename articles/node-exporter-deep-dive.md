@@ -1,9 +1,14 @@
 ---
 title: "Node Exporter Deep Dive: The Bridge Between the Linux Kernel and Prometheus"
 published: false
-description: "A deep dive into the internal structure of Node Exporter, the foundation of Prometheus monitoring. Exploring interaction with the /proc filesystem, the Collector mechanism, and extensibility via Textfile Collector and Json Exporter."
-tags: ["prometheus", "linux", "node-exporter", "o11y"]
-series: "O11y"
+description: "A deep dive into the internal structure of Node Exporter, exploring its interaction with the /proc filesystem, the Collector mechanism, and extensibility via Textfile Collector."
+tags:
+  - prometheus
+  - linux
+  - node-exporter
+  - o11y
+series: O11y
+cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/node-exporter/node-exporter-meme.png"
 ---
 
 # Introduction
@@ -147,12 +152,12 @@ scrape_configs:
 
 A choice (and potential overlap) only arises when deciding **how to pass JSON data to Prometheus**: via a script that writes to a file for Node Exporter, or via JSON Exporter.
 
-| Comparison | A. Textfile Collector (Node Exporter) | B. JSON Exporter |
-| --- | --- | --- |
-| **Mechanism** | cron + jq command → generates `.prom` file | Persistent process fetches JSON via HTTP |
-| **Pros** | No need for a new persistent process. | Configured via YAML; no scripts needed. |
-| **Cons** | Shell script management/locking is tedious. | One more daemon/process to manage. |
-| **Best For** | Simple values, monitoring local files. | Complex JSON structures, monitoring external APIs. |
+|  Comparison   |    A. Textfile Collector (Node Exporter)    |                  B. JSON Exporter                  |
+| :-----------: | :-----------------------------------------: | :------------------------------------------------: |
+| **Mechanism** | cron + jq command → generates `.prom` file  |      Persistent process fetches JSON via HTTP      |
+|   **Pros**    |    No need for a new persistent process.    |      Configured via YAML; no scripts needed.       |
+|   **Cons**    | Shell script management/locking is tedious. |         One more daemon/process to manage.         |
+| **Best For**  |   Simple values, monitoring local files.    | Complex JSON structures, monitoring external APIs. |
 
 ---
 
@@ -167,7 +172,6 @@ For simple numeric values, it's easy to convert them to Prometheus format using 
 ```bash
 # Extract value from JSON and output to .prom file (read by Node Exporter)
 echo "app_active_users $(cat app_status.json | jq '.active_users')" > /var/lib/node_exporter/metrics.prom
-
 ```
 
 #### Pattern 2: JSON Exporter
@@ -182,7 +186,6 @@ metrics:
     path: "{ .active_users }"
     help: "Active users count from JSON source"
     type: gauge
-
 ```
 
 **Selection Criteria:**

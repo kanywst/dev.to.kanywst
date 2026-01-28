@@ -5,7 +5,6 @@ description: 'A deep dive into the internal structure of Node Exporter, explorin
 tags:
   - prometheus
   - linux
-  - node
   - o11y
 series: O11y
 ---

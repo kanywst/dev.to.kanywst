@@ -1,14 +1,13 @@
 ---
-title: "Node Exporter Deep Dive: The Bridge Between the Linux Kernel and Prometheus"
+title: 'Node Exporter Deep Dive: Connecting the Linux Kernel and Prometheus'
 published: false
-description: "A deep dive into the internal structure of Node Exporter, exploring its interaction with the /proc filesystem, the Collector mechanism, and extensibility via Textfile Collector."
+description: 'A deep dive into the internal structure of Node Exporter, exploring its interaction with the /proc filesystem, the Collector mechanism, and extensibility via Textfile Collector.'
 tags:
   - prometheus
   - linux
-  - node-exporter
+  - node
   - o11y
 series: O11y
-cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/node-exporter/node-exporter-meme.png"
 ---
 
 # Introduction
@@ -107,10 +106,10 @@ This is a simple yet powerful feature that "takes the contents of `.prom` files 
 **Important**: Writing to the `.prom` file must be done **atomically**. If Node Exporter reads a file while it is being written, it might send corrupted data to Prometheus.
 
 ```bash
-# ❌ Bad Practice
+# ❌️ Bad Practice
 echo "my_metric 1" > /var/lib/node_exporter/my.prom
 
-# ✅ Good Practice (Atomic Rename)
+# ✅️ Good Practice (Atomic Rename)
 echo "my_metric 1" > /var/lib/node_exporter/my.prom.tmp
 mv /var/lib/node_exporter/my.prom.tmp /var/lib/node_exporter/my.prom
 ```
@@ -154,7 +153,7 @@ A choice (and potential overlap) only arises when deciding **how to pass JSON da
 
 |  Comparison   |    A. Textfile Collector (Node Exporter)    |                  B. JSON Exporter                  |
 | :-----------: | :-----------------------------------------: | :------------------------------------------------: |
-| **Mechanism** | cron + jq command → generates `.prom` file  |      Persistent process fetches JSON via HTTP      |
+| **Mechanism** | cron + jq command -> generates `.prom` file  |      Persistent process fetches JSON via HTTP      |
 |   **Pros**    |    No need for a new persistent process.    |      Configured via YAML; no scripts needed.       |
 |   **Cons**    | Shell script management/locking is tedious. |         One more daemon/process to manage.         |
 | **Best For**  |   Simple values, monitoring local files.    | Complex JSON structures, monitoring external APIs. |

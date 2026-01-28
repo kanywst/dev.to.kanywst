@@ -9,7 +9,7 @@ tags:
   - o11y
 series: O11y
 id: 3205854
-cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/node-exporter/node-exporter-meme.png"
+cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/node-exporter/node-exporter-meme.png'
 ---
 
 # Introduction

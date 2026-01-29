@@ -1,13 +1,14 @@
 ---
-title: "Zero Trust 2026: Has the Trust Boundary 'Vanished'? AI, ID-JAG, and Confidential Computing"
+title: 'Zero Trust 2026: Has the Trust Boundary ''Vanished''? AI, ID-JAG, and Confidential Computing'
 published: false
-description: "In 2026, security boundaries have shifted from 'Network' to 'ID' and 'Silicon'. We thoroughly explain the multi-layered defense architecture using 'ID-JAG' for Agentic AI control and 'Confidential VM/Containers' as hardware-level fortresses, based on RFC specs and chip architectures."
+description: 'In 2026, security boundaries have shifted from ''Network'' to ''ID'' and ''Silicon''. We thoroughly explain the multi-layered defense architecture using ''ID-JAG'' for Agentic AI control and ''Confidential VM/Containers'' as hardware-level fortresses, based on RFC specs and chip architectures.'
 tags:
   - security
   - zerotrust
   - ai
   - cloudnative
 series: Zero Trust
+id: 3208612
 ---
 
 # Introduction

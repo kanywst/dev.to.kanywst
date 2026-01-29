@@ -10,6 +10,7 @@ tags:
 series: Zero Trust
 id: 3208612
 cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/zerotrust/zerotrust.png'
+date: '2026-01-29T19:46:01Z'
 ---
 
 # Introduction

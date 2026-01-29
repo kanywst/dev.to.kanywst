@@ -8,6 +8,7 @@ tags:
   - ai
   - cloudnative
 series: Zero Trust
+cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/zerotrust/zerotrust.png"
 ---
 
 # Introduction

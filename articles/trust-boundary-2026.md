@@ -9,7 +9,7 @@ tags:
   - cloudnative
 series: Zero Trust
 id: 3208612
-cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/zerotrust/zerotrust.png"
+cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/zerotrust/zerotrust.png'
 ---
 
 # Introduction

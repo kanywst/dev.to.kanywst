@@ -1,7 +1,7 @@
 ---
-title: 'Deep Dive into Docker''s Fundamental Principle: ''One Container, One Process'''
+title: "Docker Deep Dive: One Container, One Process"
 published: true
-description: 'Why is ''One Container, One Process'' an absolute rule? From the basics of Linux PIDs, signals, and zombie processes to the standard of Sidecar Containers, this guide explains it thoroughly for beginners.'
+description: 'Deep Dive into Docker''s Fundamental Principle: ''One Container, One Process'''
 tags:
   - docker
   - kubernetes

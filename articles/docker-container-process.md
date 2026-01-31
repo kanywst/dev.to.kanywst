@@ -1,5 +1,5 @@
 ---
-title: "Docker Deep Dive: One Container, One Process"
+title: 'Docker Deep Dive: One Container, One Process'
 published: true
 description: 'Deep Dive into Docker''s Fundamental Principle: ''One Container, One Process'''
 tags:

@@ -241,7 +241,7 @@ Distroless does not contain `/bin/sh`. In other words, **it is physically imposs
 
 ```dockerfile
 # Build Stage
-FROM golang:1.24 as build
+FROM golang:1.25 as build
 WORKDIR /go/src/app
 COPY . .
 RUN go build -o /go/bin/app

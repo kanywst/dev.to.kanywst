@@ -9,7 +9,8 @@ tags:
   - security
 series: Docker
 id: 3214147
-cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/docker-process/docker-process-meme.png"
+cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/docker-process/docker-process-meme.png'
+date: '2026-01-31T14:51:48Z'
 ---
 
 # Introduction

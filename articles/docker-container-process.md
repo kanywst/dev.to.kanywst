@@ -1,6 +1,6 @@
 ---
 title: 'Deep Dive into Docker''s Fundamental Principle: ''One Container, One Process'''
-published: false
+published: true
 description: 'Why is ''One Container, One Process'' an absolute rule? From the basics of Linux PIDs, signals, and zombie processes to the standard of Sidecar Containers, this guide explains it thoroughly for beginners.'
 tags:
   - docker
@@ -9,6 +9,7 @@ tags:
   - security
 series: Docker
 id: 3214147
+cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/docker-process/docker-process-meme.png"
 ---
 
 # Introduction

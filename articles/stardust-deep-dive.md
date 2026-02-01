@@ -8,6 +8,7 @@ tags:
   - typescript
   - github
 series: ShowDev
+cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/stardust/stardust.png"
 ---
 
 # Introduction

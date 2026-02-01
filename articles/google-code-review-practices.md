@@ -1,6 +1,6 @@
 ---
 title: 'The Essence of Google-Style Code Review: A Culture of ''Improvement'' Over ''Perfection'''
-published: false
+published: true
 description: 'A deep dive into Google''s Engineering Practices documentation. Learn about the standards that accelerate teams, including the ''Better is Enough'' approval criteria and the critical importance of review speed.'
 tags:
   - google
@@ -8,6 +8,7 @@ tags:
   - engineering
   - productivity
 id: 3217021
+cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/google-code-review/google-code-review.png"
 ---
 
 # Introduction

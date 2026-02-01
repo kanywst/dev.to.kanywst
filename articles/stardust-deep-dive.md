@@ -9,7 +9,7 @@ tags:
   - github
 series: ShowDev
 id: 3217098
-cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/stardust/stardust.png"
+cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/stardust/stardust.png'
 ---
 
 # Introduction

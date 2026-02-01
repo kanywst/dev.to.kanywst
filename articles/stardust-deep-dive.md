@@ -1,6 +1,6 @@
 ---
 title: 'Stardust: The dashboard that transforms GitHub trends from "search" to "monitoring"'
-published: false
+published: true
 description: 'For engineers tired of constantly switching between languages, we''ve launched "Stardust" - a dashboard that lets you simultaneously monitor multiple GitHub trends across different programming languages on a single screen.'
 tags:
   - showdev

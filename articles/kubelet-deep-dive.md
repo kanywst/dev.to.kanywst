@@ -1,13 +1,14 @@
 ---
-title: "Kubernetes Deep Dive: Kubelet"
+title: 'Kubernetes Deep Dive: Kubelet'
 published: false
-description: "A thorough explanation of Kubelet internal implementation. Covers mechanisms in kind environments, the hierarchy of CRI (containerd) and OCI (runc), and the definitive differences between the often-misunderstood Eviction and OOM Killer."
+description: 'A thorough explanation of Kubelet internal implementation. Covers mechanisms in kind environments, the hierarchy of CRI (containerd) and OCI (runc), and the definitive differences between the often-misunderstood Eviction and OOM Killer.'
 tags:
   - kubernetes
   - kubelet
   - internal
   - architecture
 series: Kubernetes Fundamental
+id: 3232173
 ---
 
 # Introduction

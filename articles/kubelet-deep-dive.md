@@ -9,7 +9,8 @@ tags:
   - architecture
 series: Kubernetes Fundamental
 id: 3232173
-cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/kubelet/kubelet-meme.png"
+cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/kubelet/kubelet-meme.png'
+date: '2026-02-04T15:03:12Z'
 ---
 
 # Introduction

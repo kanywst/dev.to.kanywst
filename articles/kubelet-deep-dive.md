@@ -1,6 +1,6 @@
 ---
 title: 'Kubernetes Deep Dive: Kubelet'
-published: false
+published: true
 description: 'A thorough explanation of Kubelet internal implementation. Covers mechanisms in kind environments, the hierarchy of CRI (containerd) and OCI (runc), and the definitive differences between the often-misunderstood Eviction and OOM Killer.'
 tags:
   - kubernetes
@@ -9,6 +9,7 @@ tags:
   - architecture
 series: Kubernetes Fundamental
 id: 3232173
+cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/kubelet/kubelet-meme.png"
 ---
 
 # Introduction

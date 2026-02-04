@@ -10,7 +10,7 @@ tags:
 id: 3231565
 cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/mutex-vs-rwmutex/mutex-vs-rwmutex-meme.png'
 date: '2026-02-04T12:35:48Z'
-series: "Golang"
+series: Golang
 ---
 
 # Introduction

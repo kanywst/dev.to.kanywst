@@ -116,7 +116,7 @@ Finally, let's look at the flow of `SyncPod` where Kubelet actually starts a Pod
 
 ---
 
-## Summary
+## Conclusion
 
 Kubelet is not merely an agent, but a complex autonomous control system.
 

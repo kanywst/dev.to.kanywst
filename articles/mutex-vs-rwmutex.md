@@ -1,6 +1,6 @@
 ---
 title: 'Go Deep Dive: Mutex vs RWMutex'
-published: false
+published: true
 description: 'Is RWMutex always the right choice when reads outnumber writes? Let''s dive into the internal implementation of Go''s sync.Mutex and sync.RWMutex, analyze benchmark results, and establish clear criteria for choosing the right concurrency primitive.'
 tags:
   - go
@@ -8,6 +8,7 @@ tags:
   - performance
   - programming
 id: 3231565
+cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/mutex-vs-rwmutex/mutex-vs-rwmutex-meme.png"
 ---
 
 # Introduction

@@ -9,7 +9,8 @@ tags:
   - ebpf
 series: Linux Kernel
 id: 3236123
-cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/linux-zombie/linux-zombie-meme.png"
+cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/linux-zombie/linux-zombie-meme.png'
+date: '2026-02-05T22:02:08Z'
 ---
 
 # Introduction

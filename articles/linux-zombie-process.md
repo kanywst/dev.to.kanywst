@@ -1,6 +1,6 @@
 ---
 title: 'Linux Kernel Deep Dive: Zombie Processes and Modern Process Management'
-published: false
+published: true
 description: 'The horror of increasing ''Z'' status processes. Why do processes become zombies after death? Dissecting the kernel mechanisms determining life and death, including waitpid, Subreaper, and the internal implementation of the Go os/exec package.'
 tags:
   - linux
@@ -9,6 +9,7 @@ tags:
   - ebpf
 series: Linux Kernel
 id: 3236123
+cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/linux-zombie/linux-zombie-meme.png"
 ---
 
 # Introduction

@@ -1,8 +1,9 @@
 ---
 title: "Dunning-Kruger Effect 2.0: The 'Illusion of Omnipotence' in the AI Era"
-published: false
+published: true
 description: "With AI, anyone can mimic a Senior Engineer. This is a sweet fantasy and the biggest trap of our time. We explore the 'AI-induced Dunning-Kruger Effect' and the 'Cognitive Offloading' that silently erodes our skills. Here is the survival strategy for true engineers in 2026."
 tags: ["ai", "career", "psychology", "learning"]
+cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/dunning-kruger/dunning-kruger-meme.png"
 ---
 
 # Introduction

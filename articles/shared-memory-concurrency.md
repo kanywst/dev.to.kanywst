@@ -1,8 +1,13 @@
 ---
-title: "Concurrency Deep Dive: Memory Models, Lock-Free, and RCU"
+title: 'Concurrency Deep Dive: Memory Models, Lock-Free, and RCU'
 published: false
-description: "What is the CPU doing behind the scenes of 'reading a variable'? Dissecting Store Buffers, MESI Protocol, Memory Ordering (Acquire/Release), and the hardest part of lock-free implementation: 'Memory Reclamation (Epoch/RCU)'."
-tags: ["rust", "concurrency", "performance", "architecture"]
+description: 'What is the CPU doing behind the scenes of ''reading a variable''? Dissecting Store Buffers, MESI Protocol, Memory Ordering (Acquire/Release), and the hardest part of lock-free implementation: ''Memory Reclamation (Epoch/RCU)''.'
+tags:
+  - rust
+  - concurrency
+  - performance
+  - architecture
+id: 3239988
 ---
 
 # Introduction

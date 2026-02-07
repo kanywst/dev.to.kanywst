@@ -8,7 +8,8 @@ tags:
   - performance
   - architecture
 id: 3239988
-cover_image: https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/shared-memory-concurrency/shared-memory-meme.png
+cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/shared-memory-concurrency/shared-memory-meme.png'
+date: '2026-02-07T13:54:27Z'
 ---
 
 # Introduction

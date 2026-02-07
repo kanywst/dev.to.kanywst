@@ -1,6 +1,6 @@
 ---
 title: 'Concurrency Deep Dive: Memory Models, Lock-Free, and RCU'
-published: false
+published: true
 description: 'What is the CPU doing behind the scenes of ''reading a variable''? Dissecting Store Buffers, MESI Protocol, Memory Ordering (Acquire/Release), and the hardest part of lock-free implementation: ''Memory Reclamation (Epoch/RCU)''.'
 tags:
   - rust
@@ -8,6 +8,7 @@ tags:
   - performance
   - architecture
 id: 3239988
+cover_image: https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/shared-memory-concurrency/shared-memory-meme.png
 ---
 
 # Introduction

@@ -289,7 +289,6 @@ Event-driven architecture for handling massive concurrent connections (C10K prob
 > * **Reactor (epoll)**: **OS Level**. Interested in the **Notification** of "**When** can I read?"
 > * **CSP (Channel)**: **App Level**. Interested in the **Coordination** of "**What** to send to whom?"
 >
->
 > In fact, behind the runtimes of Go (CSP) and Node.js (Event Loop), this Reactor pattern runs mud-stained like an engine, supporting the concurrency models that are easy for humans to handle.
 
 ---

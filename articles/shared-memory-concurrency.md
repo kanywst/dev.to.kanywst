@@ -112,8 +112,8 @@ To prevent hardware (store buffers and caches) from arbitrarily reordering opera
 // Conceptual Implementation
 fn unlock() {
     // 1. Finished writing data
-    data = ...; 
-    
+    data = ...;
+
     // 2. Release Store.
     // Prevents "writing data (1)" from being reordered after "state=0 (2)".
     // This guarantees that when another thread acquires the lock, the data write is definitely finished.
@@ -124,11 +124,10 @@ fn lock() {
     // 1. Acquire Load (actually CAS, etc.).
     // Prevents "reading data (2)" after acquiring lock from coming before acquiring lock (1).
     while state.compare_exchange(0, 1, Ordering::Acquire, ...).is_err() { ... }
-    
+
     // 2. Safe to read data here
     let x = data;
 }
-
 ```
 
 ---
@@ -275,7 +274,6 @@ impl ConfigService {
         self.current_config.store(Arc::new(new_config));
     }
 }
-
 ```
 
 ### Case 2: Shared Hash Map (High Concurrency Write)
@@ -303,7 +301,6 @@ impl SessionStore {
         }
     }
 }
-
 ```
 
 ### Case 3: Simple Metrics Counter (Metrics)
@@ -329,7 +326,6 @@ impl Metrics {
         self.request_count.load(Ordering::Relaxed)
     }
 }
-
 ```
 
 ### Case 4: State Integrity Protection (Fine-grained Mutex)
@@ -359,7 +355,6 @@ impl BankAccount {
         // Unlocked immediately upon exiting scope
     }
 }
-
 ```
 
 ### Case 5: Async Event Notification (Signaling)
@@ -393,7 +388,6 @@ pub async fn run_server() {
     tokio::signal::ctrl_c().await.unwrap();
     tx.send(()).unwrap(); // Broadcast to all workers
 }
-
 ```
 
 ---
@@ -402,14 +396,14 @@ pub async fn run_server() {
 
 In Rust concurrency in 2026, if you are unsure, choose based on the following criteria.
 
-| Situation | Recommended Pattern / Crate | Reason |
-| --- | --- | --- |
-| **Read 99% : Write 1%** | `arc-swap` (RCU) | Zero cache contention during reading. |
-| **Frequent Mixed Read/Write (Map)** | `DashMap` (Sharding) | Reduces contention probability by splitting lock regions. |
-| **Simple Numeric Increment/Decrement** | `AtomicU64` (Relaxed) | No lock required. Completed at CPU instruction level. |
-| **Complex Consistency Required** | `Mutex` (Standard) | Stops reliably. But keep scope minimal. |
-| **Event / Termination Notification** | `broadcast` / `watch` | Solve with messages instead of state sharing. |
-| **Cache (TTL/Eviction)** | `moka` | Balances concurrency with cache-specific management. |
+|               Situation                | Recommended Pattern / Crate |                          Reason                           |
+| :------------------------------------: | :-------------------------: | :-------------------------------------------------------: |
+|        **Read 99% : Write 1%**         |      `arc-swap` (RCU)       |           Zero cache contention during reading.           |
+|  **Frequent Mixed Read/Write (Map)**   |    `DashMap` (Sharding)     | Reduces contention probability by splitting lock regions. |
+| **Simple Numeric Increment/Decrement** |    `AtomicU64` (Relaxed)    |   No lock required. Completed at CPU instruction level.   |
+|    **Complex Consistency Required**    |     `Mutex` (Standard)      |          Stops reliably. But keep scope minimal.          |
+|  **Event / Termination Notification**  |    `broadcast` / `watch`    |       Solve with messages instead of state sharing.       |
+|        **Cache (TTL/Eviction)**        |           `moka`            |   Balances concurrency with cache-specific management.    |
 
 ---
 

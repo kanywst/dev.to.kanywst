@@ -1,9 +1,14 @@
 ---
-title: "Concurrency Design Patterns: From Fundamental Theory to Architecture"
+title: 'Concurrency Design Patterns: From Fundamental Theory to Architecture'
 published: false
-description: "From the differences between 'concurrency' and 'parallelism' and Amdahl's Law to design strategies viewed through three layers (Architecture, Task, State). A comprehensive guide to the 'First Principles of Concurrency' required for robust system design in the AI era."
-tags: ["concurrency", "designpatterns", "architecture", "performance"]
-series: "Concurrency"
+description: 'From the differences between ''concurrency'' and ''parallelism'' and Amdahl''s Law to design strategies viewed through three layers (Architecture, Task, State). A comprehensive guide to the ''First Principles of Concurrency'' required for robust system design in the AI era.'
+tags:
+  - concurrency
+  - designpatterns
+  - architecture
+  - performance
+series: Concurrency
+id: 3241052
 ---
 
 # Introduction

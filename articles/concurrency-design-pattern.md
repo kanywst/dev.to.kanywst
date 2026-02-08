@@ -1,6 +1,6 @@
 ---
 title: 'Concurrency Design Patterns: From Fundamental Theory to Architecture'
-published: false
+published: true
 description: 'From the differences between ''concurrency'' and ''parallelism'' and Amdahl''s Law to design strategies viewed through three layers (Architecture, Task, State). A comprehensive guide to the ''First Principles of Concurrency'' required for robust system design in the AI era.'
 tags:
   - concurrency
@@ -9,6 +9,7 @@ tags:
   - performance
 series: Concurrency
 id: 3241052
+cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/concurrency-design-patterns/concurrency_design_pattern_meme.png"
 ---
 
 # Introduction

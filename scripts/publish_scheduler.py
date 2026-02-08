@@ -7,7 +7,8 @@ from dateutil import parser
 from datetime import timezone
 
 # Configuration
-ARTICLES_DIR = 'articles'
+ARTICLES_DIR = "articles"
+
 
 def main():
     # Use UTC for consistency with typical CI environments and frontmatter dates
@@ -26,7 +27,7 @@ def main():
 
     for filepath in files:
         try:
-            with open(filepath, 'r', encoding='utf-8') as f:
+            with open(filepath, "r", encoding="utf-8") as f:
                 content = f.read()
         except Exception as e:
             print(f"[!] Error reading {filepath}: {e}")
@@ -39,7 +40,7 @@ def main():
             continue
 
         fm_text = match.group(1)
-        
+
         try:
             # Parse YAML safely
             fm_data = yaml.safe_load(fm_text)
@@ -52,11 +53,11 @@ def main():
 
         # Check 'published' status
         # We only care if 'published' is explicitly False
-        if fm_data.get('published') is not False:
+        if fm_data.get("published") is not False:
             continue
 
         # Check 'date'
-        pub_date_raw = fm_data.get('date')
+        pub_date_raw = fm_data.get("date")
         if not pub_date_raw:
             continue
 
@@ -85,22 +86,24 @@ def main():
         # Compare dates
         if pub_date <= now:
             print(f"[+] Publishing: {filepath} (Scheduled: {pub_date.isoformat()})")
-            
+
             # Update the file content
             # We use regex replacement on the Frontmatter text to preserve comments/style
             new_fm_text = re.sub(
-                r'^published:\s*false',
-                'published: true',
+                r"^published:\s*false",
+                "published: true",
                 fm_text,
-                flags=re.MULTILINE | re.IGNORECASE
+                flags=re.MULTILINE | re.IGNORECASE,
             )
 
             # Reconstruct content
             # Only replace the first occurrence of the frontmatter block
-            new_content = content.replace(f"---\n{fm_text}\n---", f"---\n{new_fm_text}\n---", 1)
+            new_content = content.replace(
+                f"---\n{fm_text}\n---", f"---\n{new_fm_text}\n---", 1
+            )
 
             try:
-                with open(filepath, 'w', encoding='utf-8') as f:
+                with open(filepath, "w", encoding="utf-8") as f:
                     f.write(new_content)
                 updated_count += 1
             except Exception as e:
@@ -110,6 +113,7 @@ def main():
         print("[-] No articles need publishing.")
     else:
         print(f"[-] Successfully published {updated_count} article(s).")
+
 
 if __name__ == "__main__":
     main()

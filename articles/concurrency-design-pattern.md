@@ -75,15 +75,13 @@ There are physical and mathematical limits to parallelization.
 
 **"The serial processing part (which cannot be parallelized) becomes the bottleneck, limiting the overall performance improvement."**
 
-$$
-S(n) = \frac{1}{(1 - p) + \frac{p}{n}}
-$$
+{% katex %} S(n) = \frac{1}{(1 - p) + \frac{p}{n}} {% endkatex %}
 
-* $p$: Parallelizable proportion (e.g., 0.9 = 90%)
-* $n$: Number of processors
-* $1-p$: Serial proportion (cannot be parallelized)
+* {% katex inline %}p{% endkatex %}: Parallelizable proportion (e.g., 0.9 = 90%)
+* {% katex inline %}n{% endkatex %}: Number of processors
+* {% katex inline %}1-p{% endkatex %}: Serial proportion (cannot be parallelized)
 
-If **10%** of the program is serial ($1 - p = 0.1$), even if you provide **infinite** processors ($n \to \infty$), it will only become **10 times** faster ($\frac{1}{0.1}$) at maximum.
+If **10%** of the program is serial ({% katex inline %}1 - p = 0.1{% endkatex%}), even if you provide **infinite** processors ({% katex inline %}n \to \infty{% endkatex %}), it will only become **10 times** faster ({% katex inline %}\frac{1}{0.1}{% endkatex %}) at maximum.
 
 ![amdahl](./assets/concurrency-design-patterns/amdal.png)
 
@@ -92,11 +90,11 @@ If **10%** of the program is serial ($1 - p = 0.1$), even if you provide **infin
 Amdahl's Law assumes "fixed problem size." In reality, if resources increase, we try to solve **larger problems (higher resolution, more data)**.
 This theory states that under the premise of "fixed time, expanded problem size," the speedup from parallelization scales linearly with the number of processors.
 
-$$
+{% katex %}
 S(n) = n - (1 - p)(n - 1)
-$$
+{% endkatex %}
 
-Here, as the number of processors $n$ increases, the absolute amount of the parallelizable part $p$ expands, so the strict cap (upper limit) seen in Amdahl's Law does not occur.
+Here, as the number of processors {% katex inline %}n{% endkatex %} increases, the absolute amount of the parallelizable part {% katex inline %}p{% endkatex %} expands, so the strict cap (upper limit) seen in Amdahl's Law does not occur.
 
 ![gustafson](./assets/concurrency-design-patterns/gustafson.png)
 

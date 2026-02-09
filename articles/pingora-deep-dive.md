@@ -115,7 +115,7 @@ pub struct MyProxy;
 impl ProxyHttp for MyProxy {
     // Use () if you don't need per-request state
     type CTX = ();
-    
+
     fn new_ctx(&self) -> Self::CTX {
         ()
     }
@@ -134,7 +134,7 @@ impl ProxyHttp for MyProxy {
 
 fn main() {
     env_logger::init();
-    
+
     // Initialize Server (Skipping config file loading for this demo)
     let mut my_server = Server::new(None).unwrap();
     my_server.bootstrap();
@@ -142,13 +142,12 @@ fn main() {
     // Create Service and bind port
     let mut my_proxy_service = http_proxy_service(&my_server.configuration, MyProxy);
     my_proxy_service.add_tcp("0.0.0.0:6188");
-    
+
     info!("Simple proxy listening on 0.0.0.0:6188");
 
     my_server.add_service(my_proxy_service);
     my_server.run_forever();
 }
-
 ```
 
 ### Step 3: Verification

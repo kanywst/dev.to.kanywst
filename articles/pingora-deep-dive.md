@@ -9,7 +9,8 @@ tags:
   - cloudflare
 series: Rust
 id: 3243646
-cover_image: https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/pingora/pingora-meme.png
+cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/pingora/pingora-meme.png'
+date: '2026-02-09T12:43:47Z'
 ---
 
 # Introduction

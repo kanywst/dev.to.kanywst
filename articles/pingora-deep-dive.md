@@ -3,6 +3,7 @@ title: "Pingora: The Rust Proxy That Retired NGINX"
 published: false
 description: "Cloudflare ditched NGINX and rewrote it in Rust to create 'Pingora'. This article dissects the source code to explain the 'Two-Stage Connection Pool' mechanism, the full picture of the Server/Service architecture, and the trait methods developers need to implement."
 tags: ["rust", "pingora", "proxy", "cloudflare"]
+series: Rust
 ---
 
 # Introduction

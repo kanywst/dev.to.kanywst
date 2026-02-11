@@ -10,6 +10,7 @@ tags:
 id: 3249331
 cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/feynman/feynman-meme.png'
 date: '2026-02-11T14:59:49Z'
+series: Engineering Mindset
 ---
 
 # Introduction

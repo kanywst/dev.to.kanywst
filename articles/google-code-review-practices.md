@@ -10,6 +10,7 @@ tags:
 id: 3217021
 cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/google-code-review/google-code-review.png'
 date: '2026-02-01T13:58:48Z'
+series: Engineering Mindset
 ---
 
 # Introduction

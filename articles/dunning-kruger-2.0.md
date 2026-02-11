@@ -10,6 +10,7 @@ tags:
 id: 3237986
 cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/dunning-kruger/dunning-kruger-meme.png'
 date: '2026-02-06T11:50:27Z'
+series: Engineering Mindset
 ---
 
 # Introduction

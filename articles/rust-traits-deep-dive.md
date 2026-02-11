@@ -10,6 +10,7 @@ tags:
 series: Rust
 id: 3250050
 cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/rust-trait/rust-traits-meme.png'
+date: '2026-02-11T23:33:15Z'
 ---
 
 # Introduction

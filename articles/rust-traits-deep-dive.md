@@ -1,6 +1,6 @@
 ---
 title: 'Rust Traits Deep Dive: Static vs. Dynamic Dispatch'
-published: false
+published: true
 description: 'Do you think Traits are just Interfaces? You''re half right, but you''re missing half of Rust''s power. Let''s fully understand the difference between Static Dispatch (Monomorphization) and Dynamic Dispatch (vtable) with visual diagrams.'
 tags:
   - rust
@@ -9,6 +9,7 @@ tags:
   - polymorphism
 series: Rust
 id: 3250050
+cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/rust-trait/rust-traits-meme.png'
 ---
 
 # Introduction

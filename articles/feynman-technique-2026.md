@@ -1,8 +1,13 @@
 ---
-title: "The Feynman Technique 2026: A Cognitive Algorithm to Kill the 'Illusion of Competence'"
+title: 'The Feynman Technique 2026: A Cognitive Algorithm to Kill the ''Illusion of Competence'''
 published: false
-description: "In an era where AI gives us instant answers, the value of 'explaining it in your own words' has skyrocketed. We redefine Richard Feynman's 'teaching to learn' method for the context of modern cognitive science and engineering."
-tags: ["learning", "career", "productivity", "ai"]
+description: 'In an era where AI gives us instant answers, the value of ''explaining it in your own words'' has skyrocketed. We redefine Richard Feynman''s ''teaching to learn'' method for the context of modern cognitive science and engineering.'
+tags:
+  - learning
+  - career
+  - productivity
+  - ai
+id: 3249331
 ---
 
 # Introduction

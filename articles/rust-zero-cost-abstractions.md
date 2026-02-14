@@ -9,7 +9,7 @@ tags:
   - performance
 series: Rust
 id: 3255512
-cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/rust-zero-cost-abstractions/cover.png"
+cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/rust-zero-cost-abstractions/cover.png'
 ---
 
 # Introduction

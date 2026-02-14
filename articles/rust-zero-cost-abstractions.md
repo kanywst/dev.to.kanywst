@@ -1,6 +1,6 @@
 ---
 title: Rust Zero-Cost Abstractions Deep Dive
-published: false
+published: true
 description: 'The common wisdom that ''abstraction is slow'' does not apply in the world of Rust and C++. However, not all abstractions are free. We visualize the difference between static and dynamic dispatch, and the compiler magic of ''Monomorphization'' and ''Inlining'' at the assembly level.'
 tags:
   - rust

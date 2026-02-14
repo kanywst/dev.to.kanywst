@@ -1,6 +1,6 @@
 ---
 title: SPIFFE/SPIRE Deep Dive
-published: false
+published: true
 description: 'We take a source-code level deep dive into the internal implementation of SPIFFE/SPIRE, the standard for ''Workload Identity'' in the cloud-native environment.'
 tags:
   - spiffe
@@ -9,6 +9,7 @@ tags:
   - kubernetes
 series: SPIFFE
 id: 3255444
+cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/spire/cover.png"
 ---
 
 # Introduction

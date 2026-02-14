@@ -9,7 +9,8 @@ tags:
   - kubernetes
 series: SPIFFE
 id: 3255444
-cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/spire/cover.png"
+cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/spire/cover.png'
+date: '2026-02-14T04:55:32Z'
 ---
 
 # Introduction

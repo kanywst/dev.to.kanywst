@@ -1,9 +1,14 @@
 ---
-title: "Go Heap Fragmentation Deep Dive: The Battle Against 'Invisible Memory' Continues"
+title: 'Go Heap Fragmentation Deep Dive: The Battle Against ''Invisible Memory'' Continues'
 published: false
-description: "'The GC is running, but memory usage isn't dropping.' The cause is often heap fragmentation. This article details the design of Go's memory allocator, the mechanism of fragmentation, the despair of GOMEMLIMIT being rendered ineffective, and modern countermeasures."
-tags: ["go", "golang", "memory", "performance"]
+description: '''The GC is running, but memory usage isn''t dropping.'' The cause is often heap fragmentation. This article details the design of Go''s memory allocator, the mechanism of fragmentation, the despair of GOMEMLIMIT being rendered ineffective, and modern countermeasures.'
+tags:
+  - go
+  - golang
+  - memory
+  - performance
 series: Golang
+id: 3257105
 ---
 
 # Introduction

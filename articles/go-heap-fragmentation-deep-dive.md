@@ -9,7 +9,7 @@ tags:
   - performance
 series: Golang
 id: 3257105
-cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/go-fragmentation/cover.png"
+cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/go-fragmentation/cover.png'
 ---
 
 # Introduction

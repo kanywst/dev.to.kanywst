@@ -1,6 +1,6 @@
 ---
 title: 'Hacker Heuristics: Mental Shortcuts for Surviving a World Without ''Correct'' Answers'
-published: false
+published: true
 description: 'In modern complex systems, calculating every variable is impossible. This is a catalog of powerful rules of thumb (heuristics) for engineers to make split-second decisions in the field.'
 tags:
   - engineering

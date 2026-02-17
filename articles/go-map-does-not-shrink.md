@@ -1,9 +1,15 @@
 ---
-title: "Is it True That Go Maps Don't Shrink?"
+title: Is it True That Go Maps Don't Shrink?
 published: false
-description: "The common belief is that Go maps don't return memory after deletion. I verified this myth with actual measurements in Go 1.25. The result: Alloc decreased by 96%. The real culprit for memory not returning was RSS (in macOS environments). The key lies not in the Map itself, but in the Go runtime's virtual memory management and OS behavior."
-tags: ["go", "golang", "memory", "performance", "backend"]
+description: 'The common belief is that Go maps don''t return memory after deletion. I verified this myth with actual measurements in Go 1.25. The result: Alloc decreased by 96%. The real culprit for memory not returning was RSS (in macOS environments). The key lies not in the Map itself, but in the Go runtime''s virtual memory management and OS behavior.'
+tags:
+  - go
+  - golang
+  - memory
+  - performance
+  - backend
 series: Go Memory Management
+id: 3263696
 ---
 
 ## Introduction

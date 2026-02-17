@@ -1,6 +1,6 @@
 ---
 title: Is it True That Go Maps Don't Shrink?
-published: false
+published: true
 description: 'The common belief is that Go maps don''t return memory after deletion. I verified this myth with actual measurements in Go 1.25. The result: Alloc decreased by 96%. The real culprit for memory not returning was RSS (in macOS environments). The key lies not in the Map itself, but in the Go runtime''s virtual memory management and OS behavior.'
 tags:
   - go
@@ -10,6 +10,7 @@ tags:
   - backend
 series: Go Memory Management
 id: 3263696
+cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/go-map-shrink/cover.png"
 ---
 
 ## Introduction
@@ -224,11 +225,11 @@ Go's scavenger notifies the OS that "this page is no longer needed." However, th
 
 ### Linux (Production) vs macOS (Verification)
 
-| Environment | Default Behavior | RSS Movement |
-| --- | --- | --- |
-| **Linux (Go 1.16+)** | `MADV_DONTNEED` | **Drops immediately ✅** |
-| **macOS / Local** | Equivalent to `MADV_FREE` | **Does not drop ❌** |
-| `GODEBUG=madvdontneed=1` | `MADV_DONTNEED` | Drops immediately ✅ |
+| Environment              | Default Behavior          | RSS Movement            |
+| ------------------------ | ------------------------- | ----------------------- |
+| **Linux (Go 1.16+)**     | `MADV_DONTNEED`           | **Drops immediately ✅** |
+| **macOS / Local**        | Equivalent to `MADV_FREE` | **Does not drop ❌**     |
+| `GODEBUG=madvdontneed=1` | `MADV_DONTNEED`           | Drops immediately ✅     |
 
 Since Go 1.16, `MADV_DONTNEED` has become the default on Linux, so RSS **drops straightforwardly**.
 
@@ -327,10 +328,10 @@ It works dramatically on Linux (Production). If alerts for memory pressure occur
 
 "Go Maps don't shrink"—Summary of results verifying this myth with actual measurements.
 
-|                Myth                |       Measurement Result        |         Verdict         |
-| :--------------------------------: | :-----------------------------: | :---------------------: |
+|                Myth                |       Measurement Result        |        Verdict         |
+| :--------------------------------: | :-----------------------------: | :--------------------: |
 | Memory doesn't return after delete |    Alloc decreases by 99.98%    |        ❌ False         |
-|      Bucket structure remains      | 37MB remains (3.6% of original) |     ⚠️ Half True      |
+|      Bucket structure remains      | 37MB remains (3.6% of original) |      ⚠️ Half True       |
 |       Improved with SwissMap       |   Almost same as Classic Map    |        ❌ False         |
 |      Pointers make it lighter      |    Difference is nearly zero    |        ❌ False         |
 |       Released with m = nil        |       Completely released       |         ✅ True         |

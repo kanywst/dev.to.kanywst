@@ -10,7 +10,8 @@ tags:
   - backend
 series: Go Memory Management
 id: 3263696
-cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/go-map-shrink/cover.png"
+cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/go-map-shrink/cover.png'
+date: '2026-02-17T22:59:22Z'
 ---
 
 ## Introduction

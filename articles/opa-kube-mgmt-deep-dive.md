@@ -1,9 +1,14 @@
 ---
-title: "OPA & kube-mgmt Deep Dive"
+title: OPA & kube-mgmt Deep Dive
 published: false
-description: "While Gatekeeper is the standard for Kubernetes policy control, its predecessor, the 'OPA + kube-mgmt' setup, remains highly relevant as a versatile policy distribution platform. This article provides a comprehensive, source-code-level deep dive into the sidecar mechanism that syncs ConfigMaps to OPA's memory, the Rego evaluation process, and its application in microservice authorization."
-tags: ["opa", "kubernetes", "rego", "gatekeeper"]
+description: 'While Gatekeeper is the standard for Kubernetes policy control, its predecessor, the ''OPA + kube-mgmt'' setup, remains highly relevant as a versatile policy distribution platform. This article provides a comprehensive, source-code-level deep dive into the sidecar mechanism that syncs ConfigMaps to OPA''s memory, the Rego evaluation process, and its application in microservice authorization.'
+tags:
+  - opa
+  - kubernetes
+  - rego
+  - gatekeeper
 series: Kubernetes Security
+id: 3272144
 ---
 
 # Introduction

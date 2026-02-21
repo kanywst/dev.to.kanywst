@@ -9,7 +9,8 @@ tags:
   - gatekeeper
 series: Kubernetes Security
 id: 3272144
-cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/opa-kube-mgmt/cover.png"
+cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/opa-kube-mgmt/cover.png'
+date: '2026-02-21T00:36:09Z'
 ---
 
 # Introduction

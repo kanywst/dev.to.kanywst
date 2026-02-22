@@ -1,9 +1,14 @@
 ---
-title: "Anonymity Technology: The 5 Layers of Defense"
+title: 'Anonymity Technology: The 5 Layers of Defense'
 published: false
-description: "A technical overview of anonymity stacks, from network transport to traffic analysis resistance."
-tags: ["anonymity", "privacy", "security", "tor"]
+description: 'A technical overview of anonymity stacks, from network transport to traffic analysis resistance.'
+tags:
+  - anonymity
+  - privacy
+  - security
+  - tor
 series: Anonymity Technology
+id: 3275191
 ---
 
 # Introduction

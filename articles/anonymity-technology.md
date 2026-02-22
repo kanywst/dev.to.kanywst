@@ -1,6 +1,6 @@
 ---
 title: 'Anonymity Technology: The 5 Layers of Defense'
-published: false
+published: true
 description: 'A technical overview of anonymity stacks, from network transport to traffic analysis resistance.'
 tags:
   - anonymity
@@ -9,6 +9,7 @@ tags:
   - tor
 series: Anonymity Technology
 id: 3275191
+cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/anonymity/cover.png"
 ---
 
 # Introduction

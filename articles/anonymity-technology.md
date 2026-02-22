@@ -80,31 +80,7 @@ The sender doesn't send the message (Clove: a segment of garlic) to the real des
 When one Garlic hits a relay node and the node peels away its layer of encryption, multiple skins (Cloves) burst out from inside, flying off in completely different directions.
 From the perspective of a surveillance logger, it looks like "one packet came in, and suddenly three packets spawned and scattered in different directions." Like a cluster bomb detonating mid-air. This makes it mathematically impossible to "correlate input packets with output packets on a 1-to-1 basis."
 
-```mermaid
-sequenceDiagram
-    participant User as Sender (Alice)
-    participant Node1 as Router 1
-    participant Node2 as Router 2
-    participant Dest as Dest (Bob)
-    participant Ob as Other (Carol)
-
-    rect rgb(200, 255, 200)
-    Note over User,Ob: Onion Routing (Tor) - "1 In, 1 Out" bucket relay (tracking risk)
-    User->>Node1: 📦 Enc(Msg, Bob)
-    Node1->>Node2: 📦 Enc(Msg, Bob)
-    Node2->>Dest: 📦 Msg
-    end
-
-    rect rgb(255, 200, 200)
-    Note over User,Ob: Garlic Routing (I2P) - Detonates at impact, scattering dummies
-    User->>Node1: 🧄 Garlic [ Clove(Bob) + Clove(Carol) + Clove(Dummy) ]
-    note right of Node1: Peeling the encryption causes<br>fragmentation in multiple directions,<br>making tracking impossible
-    Node1->>Node2: 📦 Clove(Bob)
-    Node1->>Ob: 📦 Clove(Carol)
-    note right of Node1: 🗑 Clove(Dummy) is discarded or reflected
-    Node2->>Dest: 📦 Msg_Bob
-    end
-```
+![tor vs i2p](./assets/anonymity/tor-vs-i2p.png)
 
 ### Technical Comparison (Tor vs I2P)
 
@@ -125,8 +101,6 @@ The pinnacle of this is the **Signal Protocol**, adopted by WhatsApp, Skype, and
 * **The Insanity of the Double Ratchet Algorithm:**
   In typical TLS/SSL communication, once a session key is established, the same key is used for encryption for a while.
   However, Signal adopts a paranoid design where **"every single message sent generates a brand new encryption key that is immediately discarded"** (Ratchet: like a gear that only turns one way).
-
-![tor vs i2p](./assets/anonymity/tor-vs-i2p.png)
 
 Even if your phone is seized by police today and the private key (Identity Key) is extracted, **decrypting yesterday's messages is mathematically impossible**. Because the key that encrypted yesterday's messages has already been completely erased from memory (Forward Secrecy).
 

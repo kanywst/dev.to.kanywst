@@ -1,6 +1,6 @@
 ---
 title: 'RFC 6749 Deep Dive: Understanding OAuth 2.0 Design Decisions from the Specification'
-published: false
+published: true
 description: 'A line-by-line walkthrough of RFC 6749 covering all Grant Types, endpoints, and security design . Also covers the evolution toward OAuth 2.1.'
 tags:
   - oauth
@@ -9,6 +9,7 @@ tags:
   - oidc
 series: OAuth
 id: 3277973
+cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/rfc6749-oauth2-deep-dive/cover.png'
 ---
 
 # Introduction

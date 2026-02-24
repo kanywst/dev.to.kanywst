@@ -9,6 +9,8 @@ tags:
   - api
 series: OAuth
 cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/rfc6750-bearer-token-deep-dive/cover.png'
+id: 3281303
+date: '2026-02-24T13:09:24Z'
 ---
 
 # Introduction

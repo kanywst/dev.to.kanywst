@@ -1,6 +1,6 @@
 ---
 title: 'RFC 6750 Deep Dive: How Bearer Tokens Actually Work, Straight from the Spec'
-published: false
+published: true
 description: 'A deep dive into RFC 6750 — the 3 ways to send Bearer Tokens, error handling, security threats, and the evolution toward DPoP.'
 tags:
   - oauth
@@ -8,7 +8,7 @@ tags:
   - authentication
   - api
 series: OAuth
-# cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/rfc6750-bearer-token-deep-dive/cover.png'
+cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/rfc6750-bearer-token-deep-dive/cover.png'
 ---
 
 # Introduction

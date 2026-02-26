@@ -9,6 +9,7 @@ tags:
   - api
 series: OAuth
 cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/rfc6749-oauth2-deep-dive/cover.png'
+id: 3288176
 ---
 
 # Introduction

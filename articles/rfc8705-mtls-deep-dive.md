@@ -1,6 +1,6 @@
 ---
 title: 'RFC 8705 Deep Dive: Turning Access Tokens into "Unstealable Tokens" with mTLS'
-published: false
+published: true
 description: 'A deep dive into RFC 8705, explaining the mechanisms of mTLS Client Authentication and Certificate-Bound Access Tokens. Includes comparisons with DPoP and FAPI.'
 tags:
   - oauth
@@ -8,7 +8,7 @@ tags:
   - tls
   - api
 series: OAuth
-cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/rfc6749-oauth2-deep-dive/cover.png'
+cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/rfc8705-mtls-deep-dive/cover.png'
 id: 3288176
 ---
 

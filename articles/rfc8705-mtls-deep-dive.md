@@ -10,6 +10,7 @@ tags:
 series: OAuth
 cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/rfc8705-mtls-deep-dive/cover.png'
 id: 3288176
+date: '2026-02-26T13:39:06Z'
 ---
 
 # Introduction

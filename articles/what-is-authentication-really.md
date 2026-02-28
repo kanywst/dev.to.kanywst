@@ -7,7 +7,7 @@ tags:
   - security
   - oidc
   - fido2
-series: Authentication
+series: OIDC
 id: 3296063
 ---
 

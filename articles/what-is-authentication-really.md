@@ -9,6 +9,7 @@ tags:
   - fido2
 series: OIDC
 id: 3296063
+cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/what-is-authentication-really/cover.png"
 ---
 
 # Introduction

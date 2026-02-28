@@ -1,6 +1,6 @@
 ---
 title: 'OpenID Connect Core 1.0 Deep Dive: Understanding the "Authentication" Layer on top of OAuth 2.0'
-published: false
+published: true
 description: 'Reading through the OIDC Core 1.0 specification with a deep dive into ID Tokens, the 3 Authentication Flows, Claims, UserInfo, and security design.'
 tags:
   - oauth
@@ -9,6 +9,7 @@ tags:
   - oidc
 series: OIDC
 id: 3295001
+cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/oidc-core-1_0-deep-dive/cover.png"
 ---
 
 # Introduction

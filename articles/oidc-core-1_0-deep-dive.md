@@ -9,7 +9,8 @@ tags:
   - oidc
 series: OIDC
 id: 3295001
-cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/oidc-core-1_0-deep-dive/cover.png"
+cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/oidc-core-1_0-deep-dive/cover.png'
+date: '2026-02-28T06:16:17Z'
 ---
 
 # Introduction

@@ -1,6 +1,6 @@
 ---
 title: 'What Exactly is "Authentication": From the Limits of Passwords to FIDO2, Passkeys, and IdP Architecture'
-published: false
+published: true
 description: 'A systematic explanation of the history and mechanisms of "Authentication", covering the transition from passwords to FIDO2, protecting secrets with TPM, and the evolution from LDAP to OIDC and IdPs.'
 tags:
   - authentication

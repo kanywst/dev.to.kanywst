@@ -10,6 +10,7 @@ tags:
 id: 3298635
 cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/i-just-wanted-a-login-form/cover.png'
 date: '2026-03-01T15:35:02Z'
+series: ShowDev
 ---
 
 # Introduction

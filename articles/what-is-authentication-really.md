@@ -10,6 +10,7 @@ tags:
 series: OIDC
 id: 3296063
 cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/what-is-authentication-really/cover.png'
+date: '2026-03-01T02:27:44Z'
 ---
 
 # Introduction

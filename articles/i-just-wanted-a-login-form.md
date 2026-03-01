@@ -1,6 +1,6 @@
 ---
 title: 'I Just Wanted a Login Form: The "Swamp" of Complexity in the Modern Auth Ecosystem'
-published: false
+published: true
 description: '"ID and password are enough"—there was a time when I thought so, too. From forgotten passwords and social logins to SAML, RBAC, and ReBAC. This post explains the background and implementation of "I just wanted a login form."'
 tags:
   - showdev
@@ -8,6 +8,7 @@ tags:
   - authorization
   - security
 id: 3298635
+cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/i-just-wanted-a-login-form/cover.png"
 ---
 
 # Introduction

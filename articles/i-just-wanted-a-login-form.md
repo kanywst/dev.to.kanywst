@@ -45,8 +45,8 @@ This project was developed with great inspiration and ideas from [YOU JUST NEED 
 
 For those who want to actually experience this "swamp," click here.
 
-* **Site:** [kanywst.github.io](https://kanywst.github.io/)
-* **GitHub Repository:** [github.com/kanywst/kanywst.github.io](https://github.com/kanywst/kanywst.github.io)
+* **Site:** [i-just-wanted-a-login-form](https://kanywst.github.io/i-just-wanted-a-login-form/)
+* **GitHub Repository:** [github.com/kanywst/i-just-wanted-a-login-form](https://github.com/kanywst/i-just-wanted-a-login-form)
 
 ## Conclusion
 

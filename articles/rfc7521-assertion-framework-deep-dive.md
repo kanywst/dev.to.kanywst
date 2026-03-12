@@ -8,7 +8,8 @@ tags:
   - authentication
 series: OAuth
 id: 3344035
-cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/rfc7521-assertion-framework-deep-dive/cover.png"
+cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/rfc7521-assertion-framework-deep-dive/cover.png'
+date: '2026-03-12T13:38:07Z'
 ---
 
 # Introduction

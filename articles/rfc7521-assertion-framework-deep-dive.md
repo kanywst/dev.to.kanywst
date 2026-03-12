@@ -1,6 +1,6 @@
 ---
 title: 'RFC 7521 Deep Dive: Assertion Framework for OAuth 2.0 Client Authentication and Authorization Grants'
-published: false
+published: true
 description: 'A deep dive into RFC 7521, the abstract framework for using SAML and JWT assertions as client authentication and authorization grants in OAuth 2.0, with diagrams.'
 tags:
   - oauth
@@ -8,6 +8,7 @@ tags:
   - authentication
 series: OAuth
 id: 3344035
+cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/rfc7521-assertion-framework-deep-dive/cover.png"
 ---
 
 # Introduction

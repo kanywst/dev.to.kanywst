@@ -1,6 +1,6 @@
 ---
 title: 'AI Agent Authentication & Authorization Deep Dive: Reading draft-klrc-aiagent-auth-00'
-published: false
+published: true
 description: 'A thorough walkthrough of the IETF Internet-Draft ''draft-klrc-aiagent-auth-00'' published in March 2026. This article explains how to authenticate and authorize AI agents by composing WIMSE, SPIFFE, and OAuth 2.0 — no new protocols required.'
 tags:
   - aiagent
@@ -9,6 +9,7 @@ tags:
   - identity
 series: AI Agent Security
 id: 3350788
+cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/draft-klrc-aiagent-auth-deep-dive/cover.png'
 ---
 
 # Introduction

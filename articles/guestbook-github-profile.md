@@ -10,6 +10,7 @@ tags:
 cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/guestbook-github-profile/cover.png'
 series: ShowDev
 id: 3389902
+date: '2026-03-23T15:07:01Z'
 ---
 
 How do you use your GitHub Profile README?

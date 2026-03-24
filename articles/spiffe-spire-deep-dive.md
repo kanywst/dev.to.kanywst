@@ -7,7 +7,7 @@ tags:
   - spire
   - security
   - kubernetes
-series: SPIFFE
+series: Workload Identity
 id: 3255444
 cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/spire/cover_image.png'
 date: '2026-02-14T04:55:32Z'

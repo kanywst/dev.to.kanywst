@@ -9,7 +9,8 @@ tags:
   - iam
 series: Authorization
 id: 3424991
-cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/rbac-abac-rebac-access-control-deep-dive/cover.png"
+cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/rbac-abac-rebac-access-control-deep-dive/cover.png'
+date: '2026-03-29T12:02:44Z'
 ---
 
 # Introduction

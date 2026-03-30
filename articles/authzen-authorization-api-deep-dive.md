@@ -1,6 +1,6 @@
 ---
 title: 'AuthZEN Authorization API 1.0 Deep Dive: The Standard API That Separates Authorization Decisions from Enforcement'
-published: false
+published: true
 description: 'A deep dive into OpenID AuthZEN Authorization API 1.0 based on the original specification: PDP/PEP model, information model, Access Evaluation API, batch evaluation, Search APIs, PDP Metadata, HTTPS binding, and security design.'
 tags:
   - oauth
@@ -9,6 +9,7 @@ tags:
   - api
 series: OAuth
 id: 3430620
+cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/authzen-authorization-api-deep-dive/cover.png"
 ---
 
 # Introduction

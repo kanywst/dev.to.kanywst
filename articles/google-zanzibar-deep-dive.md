@@ -1,6 +1,6 @@
 ---
 title: 'Google Zanzibar Deep Dive: Handling 2 Trillion ACLs in Under 10ms'
-published: false
+published: true
 description: 'A deep dive into the Google Zanzibar paper — covering Relation Tuples, the New Enemy problem, Zookies, the Leopard index, and system architecture. With notes on SpiceDB, OpenFGA, and other OSS implementations.'
 tags:
   - authorization
@@ -9,6 +9,7 @@ tags:
   - google
 series: Authorization
 id: 3441179
+cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/google-zanzibar-deep-dive/cover.png"
 ---
 
 # Introduction

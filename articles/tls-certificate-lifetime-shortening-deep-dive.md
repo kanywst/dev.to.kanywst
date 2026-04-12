@@ -1,5 +1,5 @@
 ---
-title: "Why Do SSL/TLS Certificate Lifetimes Keep Getting Shorter?: Everything You Need to Know for the 47-Day Era"
+title: 'Why Do SSL/TLS Certificate Lifetimes Keep Getting Shorter?: Everything You Need to Know for the 47-Day Era'
 published: true
 description: 'CA/Browser Forum SC-081 mandates a phased reduction of certificate validity to 47 days by 2029. This article dives deep into the structural flaws of revocation that drove this decision, and the operational challenges it creates.'
 tags:

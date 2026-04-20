@@ -10,6 +10,7 @@ tags:
 series: Service Mesh
 cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/xds-deep-dive/cover.png'
 id: 3527803
+date: '2026-04-20T15:40:41Z'
 ---
 
 # Introduction

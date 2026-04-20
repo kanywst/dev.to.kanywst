@@ -8,7 +8,8 @@ tags:
   - kubernetes
   - istio
 series: Service Mesh
-cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/xds-deep-dive/cover.png"
+cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/xds-deep-dive/cover.png'
+id: 3527803
 ---
 
 # Introduction

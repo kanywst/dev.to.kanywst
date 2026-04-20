@@ -8,7 +8,9 @@ tags:
   - beginners
   - todayilearned
 series: Cryptography
-cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/why-shorten-crypto-key-length-2026/cover.png"
+cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/why-shorten-crypto-key-length-2026/cover.png'
+id: 3523124
+date: '2026-04-19T15:50:50Z'
 ---
 
 "ECDSA P-256 has shorter keys than RSA-2048. So it must be weaker."

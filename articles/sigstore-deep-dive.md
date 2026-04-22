@@ -9,7 +9,8 @@ tags:
   - devops
 series: Supply Chain Attack
 id: 3537114
-cover_image: "https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/sigstore-deep-dive/cover.png"
+cover_image: 'https://raw.githubusercontent.com/kanywst/dev.to.kanywst/refs/heads/main/articles/assets/sigstore-deep-dive/cover.png'
+date: '2026-04-22T14:51:44Z'
 ---
 
 # Introduction

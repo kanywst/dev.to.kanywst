@@ -4,6 +4,7 @@ published: false
 description: "A complete teardown of the SLSA specification. We dissect the threat model, Build and Source track requirements, Provenance structure, and the verification flow with diagrams."
 tags: ["security", "supplychain", "slsa", "openssf"]
 series: "Supply Chain Security"
+cover_image: "https://raw.githubusercontent.com/0-draft/dev.to/refs/heads/main/articles/assets/slsa-supply-chain-levels-deep-dive/cover.png"
 ---
 
 # Introduction

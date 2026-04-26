@@ -39,7 +39,7 @@ jobs:
           fi
 
           # Install devto-cli
-          npm install -g devto-cli
+          npm install -g @sinedied/devto-cli
 
           for file in $FILES; do
             if [ -f "$file" ]; then
